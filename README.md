@@ -1,5 +1,8 @@
 ## CoinCoin Insolite
 
+Related repo: https://github.com/Dreeion/coincoin-insolite-web
+
+---
 
 The "CoinCoin Insolite" application is a student project aiming to use and develop our skills in a two-weeks-long project. 
 
