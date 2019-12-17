@@ -4,15 +4,14 @@
 The "CoinCoin Insolite" application is a student project aiming to use and develop our skills in a two-weeks-long project. 
 
 It aims to develop an application allowing to its users to see and visit unusual places around them.
-The second part of the project is to design and create a website highlighting the mobile application. 
+It is also required to design and develop a website to highlighting the mobile application.
 
 ------
 
 L'application "CoinCoin Insolite" est un projet d'étudiants ayant pour objectif d'utiliser et de développer nos compétences dans un projet d'une durée de deux semaines.
 
 L'objectif est de développer une application permettant aux utilisateurs de voir et de visiter des lieux insolites autour d'eux.
-La deuxième partie de ce projet est de designer et de créer un site web mettant en avant l'application mobile.
-
+Il est également demandé de designer et de développer un site web permettant de mettre en avant l'application.
 ---
 
 **Maintainers:**
