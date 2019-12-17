@@ -12,6 +12,7 @@ L'application "CoinCoin Insolite" est un projet d'étudiants ayant pour objectif
 
 L'objectif est de développer une application permettant aux utilisateurs de voir et de visiter des lieux insolites autour d'eux.
 Il est également demandé de designer et de développer un site web permettant de mettre en avant l'application.
+
 ---
 
 **Maintainers:**
