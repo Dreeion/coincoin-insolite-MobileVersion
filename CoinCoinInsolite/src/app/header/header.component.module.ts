@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
-import { FooterComponent } from './footer.component';
+import { HeaderComponent } from './header.component';
 
 @NgModule({
   imports: [
@@ -10,7 +10,7 @@ import { FooterComponent } from './footer.component';
     IonicModule,
     RouterModule
   ],
-  declarations: [FooterComponent],
-  exports: [FooterComponent]
+  declarations: [HeaderComponent],
+  exports: [HeaderComponent]
 })
-export class TestComponentModule {}
+export class HeaderComponentModule {}

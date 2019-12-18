@@ -4,20 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SettingsPageRoutingModule } from './settings-routing.module';
+import { GaleriePageRoutingModule } from './galerie-routing.module';
 
-import { SettingsPage } from './settings.page';
+import { GaleriePage } from './galerie.page';
 
 import { TestComponentModule } from '../footer/footer.component.module';
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SettingsPageRoutingModule,
+    GaleriePageRoutingModule,
     TestComponentModule
   ],
-  declarations: [SettingsPage]
+  declarations: [GaleriePage]
 })
-export class SettingsPageModule {}
+export class GaleriePageModule {}
