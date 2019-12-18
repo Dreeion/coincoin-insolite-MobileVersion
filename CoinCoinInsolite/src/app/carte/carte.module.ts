@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SettingsPageRoutingModule } from './settings-routing.module';
+import { CartePageRoutingModule } from './carte-routing.module';
 
-import { SettingsPage } from './settings.page';
+import { CartePage } from './carte.page';
 
 import { TestComponentModule } from '../footer/footer.component.module';
 
@@ -15,9 +15,9 @@ import { TestComponentModule } from '../footer/footer.component.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    SettingsPageRoutingModule,
+    CartePageRoutingModule,
     TestComponentModule
   ],
-  declarations: [SettingsPage]
+  declarations: [CartePage]
 })
-export class SettingsPageModule {}
+export class CartePageModule {}
