@@ -1,0 +1,20 @@
+ion-title{
+    z-index: 3;
+    text-align: center;
+}
+
+ion-content{
+margin-left:40px;
+
+}
+
+ion-input{
+border: 1px solid;
+margin:40;
+}
+
+.list-avatar {
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+}
