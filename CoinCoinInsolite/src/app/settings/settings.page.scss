@@ -11,11 +11,48 @@ margin-bottom:45px;
 
 ion-input{
 border: 1px solid;
-margin:40px;
+border-radius:8px;
 }
 
 .list-avatar {
 display:flex;
 flex-direction:row;
 justify-content:space-around;
+}
+
+.list-drapeau {
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+}
+
+.list-profil {
+	
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+}
+
+.profil{
+	width: 40px;
+    height: 40px;
+    border-radius: 20px;
+	border: 1px solid;
+}
+
+
+
+.drapeau{
+	width: 75px;
+	height: 50px;
+	background: green;
+	}
+	
+	
+#cgu{
+	text-align: center;
+}
+
+#suppr{
+	text-align: center;
 }

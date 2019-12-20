@@ -23,7 +23,7 @@
   <ion-title>Profil</ion-title>
   <h2>Entrer un pseudonyme</h2>
   <ion-input></ion-input>
-  <h2>Selectionner un profil</h2>
+  <h2>Sélectionner un profil</h2>
   
  <ion-list class="list-avatar">
   <ion-avatar>
@@ -55,13 +55,22 @@
     </ion-list>
 
 
-  <h2>Sélectionner un langage</h2>
-  <ion-img src="../../assets/Français.png" alt="image"></ion-img>
-  <ion-img></ion-img>
+  <h2>Sélectionner une langue</h2>
+<ion-list class="list-drapeau">
+ <img class=drapeau src="../../assets/francais.png" alt="image">
+ <img class=drapeau src="../../assets/anglais.png" alt="image">
+</ion-list>
    <h2>Selectionner une couleur de profil</h2>
-   <p>Conditions générale d’utilisation</p>
-   <p>Supprimer le compte</p>
-  
+<ion-list class="list-profil">
+<div class="profil" style="background:yellow"></div>
+<div class="profil" style="background:green"></div>
+<div class="profil" style="background:red"></div>
+<div class="profil" style="background:cyan"></div>
+<div class="profil" style="background:blue"></div>
+</ion-list>
+   <p id="cgu" tab="cgu">Conditions générale d’utilisation</p>
+   <p id="suppr">Supprimer le compte</p>
+   <br/><br/><br/>
 </ion-content>
 
 <app-footer></app-footer>
