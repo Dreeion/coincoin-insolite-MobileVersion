@@ -1,5 +1,8 @@
 {
   "name": "CoinCoinInsolite",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }
