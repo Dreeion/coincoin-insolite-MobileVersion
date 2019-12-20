@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./galerie/galerie.module').then( m => m.GaleriePageModule)},
@@ -15,18 +15,14 @@ const routes: Routes = [
   {
     path: 'carte',
     loadChildren: () => import('./carte/carte.module').then( m => m.CartePageModule)
-  },  {
-    path: 'cgu',
-    loadChildren: () => import('./cgu/cgu.module').then( m => m.CGUPageModule)
   }
-
 
 
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),HttpClientModule
   ],
   exports: [RouterModule]
 })
