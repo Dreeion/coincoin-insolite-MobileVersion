@@ -15,7 +15,11 @@ const routes: Routes = [
   {
     path: 'carte',
     loadChildren: () => import('./carte/carte.module').then( m => m.CartePageModule)
+  },  {
+    path: 'cgu',
+    loadChildren: () => import('./cgu/cgu.module').then( m => m.CGUPageModule)
   }
+
 
 
 ];
