@@ -1,0 +1,85 @@
+General Terms of Use
+
+###1. About Us
+The COINCOIN INSOLITE Company, SAS, with a capital of 50,000 euros, headquartered in ORVAULT (44114) 213 Route de Rennes, registered in the register of trade and companies of ORVAULT under the number 123 456 789 represented by Mr Mael DEBON (hereafter the " Company").
+
+The Company offers the following services: Provide a mobile app that allows hikers to easily locate and visit unusual places around them.
+
+###2. Preamble
+The Company invites its Users to read these General Terms of Use (hereinafter the "CGU"). GUCs apply to all Services provided by the Company to its Users in the same category, regardless of the clauses that may be included on the User's documents.
+
+GUCs are systematically communicated to the User who requests them.
+
+### 3. Definitions
+"General Terms of Use" or "CGU" refers to these terms and conditions of online use;
+
+"Services" refers to all services offered to Users by the Company through this Application;
+
+"Application" refers to this Application, i.e. coincoininsolite.fr;
+
+"Company" refers to the Unusual CoinCoin  Company, more broadly designated in Article I of these; and
+
+"User" refers to anyone who uses the App.
+
+###4. Registration
+Registration for the Application is open to all legal or physical persons.
+
+The use of the Services offered on the Application is conditional on the User's registration on the Application. Registration is free.
+To register, the User must complete all the required fields, without which the service cannot be delivered. Otherwise the registration will not be completed.
+
+Users guarantee and declare on the honor that all information provided on the Application, especially when it is registered, is accurate and in accordance with reality. They agree to update their personal information from the page dedicated to them and available in their account.
+
+Every Registered User has an ID and password. These are strictly personal and confidential and should not be communicated to third parties under penalty of deleting the account of the Registered User violator. Each Registered User is personally responsible for maintaining the confidentiality of their User name and password. The Company will not be held responsible for the impersonation of a User. If a User suspects fraud at any time, they should contact the Company as soon as possible so that the Company can take the necessary measures and regularize the situation.
+
+Each User, whether a legal or physical person, can only hold an account on the Application.
+In the event of non-compliance with the GUCs, including the creation of multiple accounts for a single person or the provision of false information, the Company reserves the right to temporarily or permanently delete all accounts created by Registered User Offender.
+The deletion of the account results in the permanent loss of all benefits and services acquired on the Application.
+
+In the event of an account being deleted by the Company for breach of the duties and obligations set out in the GUCs, the offending User is formally prohibited from re-registering on the Application directly, through another address electronic or person-to-person without the Company's express permission.
+
+###5. Service delivery
+The Services subject to the GUCs are those that appear on the Application and are offered directly by the Company or its partner providers.
+
+The services are described on the corresponding page within the Application and mention is made of all their essential characteristics. The Company cannot be held responsible for the impossibility of performing the service when the User is not eligible.
+
+###6. Processing personal data
+Registration on the Application results in the processing of the User's personal data. If the User refuses to process his data, he is asked to refrain from using the Application.
+This processing of personal data is done in accordance with the General Data Protection Regulations 2016/679 of 27 April 2016.
+
+Furthermore, in accordance with the Computer and Freedoms Act of 6 January 1978, the User has, at all times, the right to question, access, correct, modify and object to all his personal data by writing, by mail and justifying his identity, at the following address: support@coincoininsolite.fr.
+
+This personal data is necessary to improve the functionality of the Application.
+
+###7. Sharing collected data
+The Application may use third-party companies to carry out certain transactions. By browsing the Application, the User accepts that third-party companies have access to their data to make the Application work.
+These third-party companies only have access to the data collected as part of the task.
+The Application remains responsible for processing this data.
+In addition, the User may be required to receive information or commercial offers from the Company or its partners.
+
+The User may object at any time to the receipt of these commercial offers, by writing to the Company's address listed above, or by clicking on the link provided for this purpose within the e-mails received.
+In addition, Users' information may be passed on to third parties without their prior express consent in order to achieve the following goals:
+comply with the law
+protect anyone from serious bodily harm or even death
+combatfraud or infringement set against the Company or its users
+protect the Company's property rights.
+
+###8. Data protection
+The Company provides an appropriate level of security commensurate with the risks incurred and their probability, in accordance with the General Data Protection Regulations 2016/679 of April 27, 2016.
+
+However, these measures are in no way a guarantee and do not commit the Company to a data security obligation of results.
+
+###9. Cookies
+To enable its Users to benefit from optimal navigation on the Application and better functioning of the various interfaces and applications, the Company is likely to implant a cookie on the User's computer. This cookie allows you to store information about browsing the Application, as well as any data entered by users (including searches, login, email,password).
+The User expressly authorizes the Company to deposit a so-called "cookie" file on the user's hard drive.
+The User has the ability to block, change the shelf life, or delete this cookie via the interface of his browser. If the systematic deactivation of cookies on the User's browser prevents it from using certain services or features of the Application, this malfunction cannot in any way constitute damage to the member who will not be able to claim no compensation for this fact.
+
+###10. Changes
+The Company reserves the right to amend the Application, the services offered therein, the CGUs and any delivery procedures or other constituent elements of the services performed by the Company through the Application.
+
+###11. Responsibility
+The Company cannot under any circumstances be held liable for the unavailability, whether temporary or permanent of the Application, and, although it is using all means to ensure the service at all times, it may be interrupted any time. In addition, the Company reserves the right, by voluntary deed, to make the Application unavailable in order to carry out any update, improvement or maintenance operation.
+
+As noted earlier, the Company cannot be held responsible for delays in the delivery of a service for reasons beyond its control, beyond its control, unpredictable and irresistible, or for which its fault cannot be attributed to it.
+
+###12. Intellectual property
+The trademark, logo, and graphic charter of this Application are trademarks of INPI  and intellectual property copyrights, which are owned exclusively by the Company. Any dissemination, exploitation, representation, reproduction, whether partial or complete without the express permission of that company will expose the offender to civil and criminal prosecution.
