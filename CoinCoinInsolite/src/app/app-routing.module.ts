@@ -20,7 +20,11 @@ const routes: Routes = [
   {
     path: 'cgu',
     loadChildren: () => import('./cgu/cgu.module').then( m => m.CGUPageModule)
+  },  {
+    path: 'inscription',
+    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
   }
+
 
 
 
