@@ -6,11 +6,11 @@
 
 <ion-content>
 
- <h2>Notifications</h2>
+ <h2>Notifications </h2>
  
  <ion-list>
   <ion-item>
-    <ion-label> Proche d'un lieu souvent visité </ion-label>
+    <ion-label> Proche d'un lieu souvent visitÃ© </ion-label>
     <ion-toggle></ion-toggle>
   </ion-item>
 
@@ -18,12 +18,17 @@
     <ion-label>Newsletters</ion-label>
     <ion-toggle></ion-toggle>
   </ion-item>
+  
   </ion-list>
   
-  <ion-title>Profil</ion-title>
-  <h2>Entrer un pseudonyme</h2>
-  <ion-input></ion-input>
-  <h2>Sélectionner un profil</h2>
+  <h2>Changer de pseudonyme</h2>
+  <ion-input type="text" placeholder="Nouveau Pseudonyme"></ion-input>
+
+    <h2>Changer de Mot de passe</h2>
+  <ion-input type="password" placeholder="Ancien Mot de passe"></ion-input>
+  <br>
+  <ion-input type="password" placeholder="Nouveau Mot de passe"></ion-input>
+  <h2>SÃ©lectionner un profil</h2>
   
  <ion-list class="list-avatar">
   <ion-avatar>
@@ -55,13 +60,13 @@
     </ion-list>
 
 
-  <h2>Sélectionner une langue</h2>
+  <h2>SÃ©lectionner une langue</h2>
 <ion-list class="list-drapeau">
  <img class="drapeau" src="../../assets/francais.png" alt="image">
  <img class="drapeau" src="../../assets/anglais.png" alt="image">
 </ion-list>
 
-<p> <ion-tab-button id="cgu" tab="cgu">Conditions générale d’utilisation</ion-tab-button> </p>
+<p> <ion-tab-button id="cgu" tab="cgu">Conditions gÃ©nÃ©rale d’utilisation</ion-tab-button> </p>
    <p id="suppr" > <ion-button (click)="presentAlert()" fill="warning" >Supprimer le compte</ion-button> </p>
    <br/><br/><br/>
 </ion-content>
