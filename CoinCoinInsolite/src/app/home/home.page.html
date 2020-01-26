@@ -1,17 +1,43 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content >
+  <div class="padding">
+    
+    <div class="logo">
+      <!-- <ion-icon color="light" name="sunny"></ion-icon> -->
+       <img src="../../assets/logo_coincoins.png"> 
+    </div>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-item >
+      <ion-label color="light">Email</ion-label>
+      <ion-input color="light" type="mail" placeholder="Adresse email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="light">Mot de passe</ion-label>
+      <ion-input color="light" type="password" placeholder="Mot de passe"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-button color="light" slot="end" fill="clear">Mot de passe oublié ?</ion-button>
+    </ion-item>
+
+    <ion-button color="light" expand="block" shape="round" fill="outline" href="carte">Connexion</ion-button>
+    <br>
+    <ion-button color="tertiary" expand="block" shape="round">Inscription</ion-button>
+
+    <ion-item lines="none">
+      <ion-label color="light" class="ion-text-center">Ou connectez-vous avec</ion-label>
+    </ion-item>
+    
+    <div class="flex">
+      <ion-button color="facebook" shape="round">
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>
+        Facebook
+      </ion-button>
+      <ion-button color="google" shape="round">
+        <ion-icon slot="start" name="logo-google"></ion-icon>
+        Google
+      </ion-button>
+    </div>
+
   </div>
 </ion-content>
-
-
-<app-footer></app-footer>
