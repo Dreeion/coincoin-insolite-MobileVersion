@@ -23,6 +23,10 @@ const routes: Routes = [
   },  {
     path: 'inscription',
     loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
+  },
+  {
+    path: 'mdp-perdu',
+    loadChildren: () => import('./mdp-perdu/mdp-perdu.module').then( m => m.MdpPerduPageModule)
   }
 
 
