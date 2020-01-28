@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-settings',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPage implements OnInit {
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  constructor(public alertController: AlertController) {}
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Alerte',
+      subHeader: 'Voulez-vous vraiment supprimer votre compte ?',
+      buttons: ['NON', 'OUI'],
+    });
+
+    await alert.present();
   }
-
 }

@@ -10,6 +10,8 @@ import { CartePage } from './carte.page';
 
 import { TestComponentModule } from '../footer/footer.component.module';
 
+import { DynamicMapComponent } from '../dynamic-map/dynamic-map.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { TestComponentModule } from '../footer/footer.component.module';
     CartePageRoutingModule,
     TestComponentModule
   ],
-  declarations: [CartePage]
+  declarations: [CartePage,DynamicMapComponent],
+  exports : [DynamicMapComponent]
 })
 export class CartePageModule {}
