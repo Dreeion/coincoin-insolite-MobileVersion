@@ -6,12 +6,15 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { TestComponentModule } from '../footer/footer.component.module';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    TranslateModule.forChild(),
     RouterModule.forChild([
       {
         path: '',
