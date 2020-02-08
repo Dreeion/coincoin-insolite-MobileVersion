@@ -7,23 +7,24 @@
        <img src="../../assets/logo_coincoins.png"> 
     </div>
 
+    <div *ngIf="!connected">
     <ion-item >
       <ion-label color="light">Email</ion-label>
-      <ion-input color="light" type="mail" placeholder="Adresse email"></ion-input>
+      <ion-input color="light" type="mail" placeholder="Adresse email" [(ngModel)]="dataUser.email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="light">Mot de passe</ion-label>
-      <ion-input color="light" type="password" placeholder="Mot de passe"></ion-input>
+      <ion-input color="light" type="password" placeholder="Mot de passe" [(ngModel)]="dataUser.password"></ion-input>
     </ion-item>
 
     <ion-item lines="none">
       <ion-button color="light" slot="end" fill="clear" href="mdp-perdu">Mot de passe oubli√© ?</ion-button>
     </ion-item>
 
-    <ion-button color="light" expand="block" shape="round" fill="outline" href="carte">Connexion</ion-button>
+    <ion-button color="light" expand="block" shape="round" fill="outline" (click)="login()">Connexion</ion-button>
     <br>
-    <ion-button color="tertiary" expand="block" shape="round" href="inscription">Inscription</ion-button>
+    <ion-button color="tertiary" expand="block" shape="round" href="inscription" >Inscription</ion-button>
 
     <ion-item lines="none">
       <ion-label color="light" class="ion-text-center">Ou connectez-vous avec</ion-label>
@@ -39,5 +40,32 @@
         Google
       </ion-button>
     </div>
+  </div>
+</div>
+<div *ngIf="connected">
+    <!-- ¿ afficher si l'utilisateur est bien connectÈ -->
+    <ion-item>
+      <ion-label>
+        <p>MÈthode de connexion</p>
+        <h2><b>email & {{ method }}</b></h2>
+      </ion-label>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>
+        <p>Identifiant</p>
+        <h2><b>{{ userId }}</b></h2>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <p>Adresse email</p>
+        <h2><b>{{ mail }}</b></h2>
+      </ion-label>
+    </ion-item>
+
+    <ion-button expand="block" color="danger" (click)="logout()">DECONNEXION</ion-button>
+    <ion-button expand="block" color="primary" href="carte">Lancer CoincoinInsolite</ion-button>
   </div>
 </ion-content>

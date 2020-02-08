@@ -12,8 +12,15 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 
 
-export class CartePage implements OnInit { 
+export class CartePage implements OnInit {
+
+  constructor(private camera: Camera) {
+    sourceType: this.camera.PictureSourceType.CAMERA;
+   }
   map: Map;
+
+
+  image: any = '';
 
   ionViewDidEnter() { this.leafletMap(); }
 
@@ -38,32 +45,25 @@ export class CartePage implements OnInit {
     this.map.remove();
   }
 
-  constructor(private camera: Camera) {
-    sourceType: this.camera.PictureSourceType.CAMERA
-   }
-
   ngOnInit() {
   }
 
-
-  image:any=''
-  
-  openCam(){
+  openCam() {
     const options: CameraOptions = {
       quality: 100,
       destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
-    }
-    
+    };
+
     this.camera.getPicture(options).then((imageData) => {
      // imageData is either a base64 encoded string or a file URI
      // If it's base64 (DATA_URL):
-     //alert(imageData)
-     this.image=(<any>window).Ionic.WebView.convertFileSrc(imageData);
+     // alert(imageData)
+     this.image = ( window as any).Ionic.WebView.convertFileSrc(imageData);
     }, (err) => {
      // Handle error
-     alert("error "+JSON.stringify(err))
+     alert('error ' + JSON.stringify(err));
     });
 
   }
