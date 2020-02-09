@@ -26,6 +26,9 @@ export const firebaseConfig = {
     measurementId: 'G-MXPY7WTVKH'
 };
 
+import { Facebook } from '@ionic-native/facebook/ngx';
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -39,10 +42,12 @@ export const firebaseConfig = {
     AngularFireStorageModule
   ],
 
+  
   providers: [
+    Camera,
+    Facebook,
     StatusBar,
     SplashScreen,
-    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

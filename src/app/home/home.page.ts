@@ -2,14 +2,17 @@ import { Component } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Router } from '@angular/router';
-
+import * as firebase from 'firebase/app';
+import { Facebook } from '@ionic-native/facebook/ngx';
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  providerFb: firebase.auth.FacebookAuthProvider;
 
   dataUser = {
       email: '',
@@ -23,8 +26,12 @@ export class HomePage {
   constructor(
     public afDB: AngularFireDatabase,
     public toastController: ToastController,
-    public afAuth: AngularFireAuth
+    public afAuth: AngularFireAuth,
+    private fb: Facebook,
+    public platform: Platform
   ) {
+    this.providerFb = new firebase.auth.FacebookAuthProvider();
+
     this.afAuth.authState.subscribe(auth => {
       if (!auth) {
         console.log('non connecté');
@@ -39,7 +46,13 @@ export class HomePage {
     });
   }
 
-ngOnInit() {this.logout(); }
+/* --- --- CHARGEMENT DE LA PAGE --- --- */
+
+  ngOnInit() {
+    this.logout();
+  }
+
+/* --- --- CONNECTION EMAIL --- --- */
 
   login() {
     this.afAuth.auth.signInWithEmailAndPassword(this.dataUser.email, this.dataUser.password)
@@ -54,10 +67,6 @@ ngOnInit() {this.logout(); }
       this.loginError();
       console.log('Erreur: ' + err);
     });
-  }
-
-  logout() {
-    this.afAuth.auth.signOut();
   }
 
   async loginError() {
@@ -76,5 +85,48 @@ ngOnInit() {this.logout(); }
       duration: 2000
     });
     toast.present();
+  }
+
+/* --- --- CONNECTION FACEBOOK --- --- */
+
+  facebookLogin() {
+      if (this.platform.is('cordova')) {
+        console.log('PLateforme cordova');
+        this.facebookCordova();
+      } else {
+        console.log('PLateforme Web');
+        this.facebookWeb();
+      }
+  }
+
+
+
+  facebookCordova() {
+      this.fb.login(['email']).then( (response) => {
+          const facebookCredential = firebase.auth.FacebookAuthProvider
+              .credential(response.authResponse.accessToken);
+          firebase.auth().signInWithCredential(facebookCredential)
+          .then((success) => {
+              console.log('Info Facebook: ' + JSON.stringify(success));
+          }).catch((error) => {
+              console.log('Erreur: ' + JSON.stringify(error));
+          });
+      }).catch((error) => { console.log(error); });
+    }
+
+  facebookWeb() {
+    this.afAuth.auth
+      .signInWithPopup(new firebase.auth.FacebookAuthProvider())
+      .then((success) => {
+        console.log('Info Facebook: ' + JSON.stringify(success));
+      }).catch((error) => {
+        console.log('Erreur: ' + JSON.stringify(error));
+      });
+  }
+
+/* --- --- DECONNECTION --- --- */
+
+  logout() {
+    this.afAuth.auth.signOut();
   }
 }
