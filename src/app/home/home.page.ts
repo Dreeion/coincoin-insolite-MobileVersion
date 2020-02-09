@@ -56,21 +56,6 @@ ngOnInit() {this.logout(); }
     });
   }
 
-  signUp() {
-    this.afAuth.auth.createUserWithEmailAndPassword(this.dataUser.email, this.dataUser.password)
-    .then(() => {
-      console.log('Connexion réussie');
-      this.dataUser = {
-        email: '',
-        password: ''
-      };
-      this.loginSuccess();
-    }).catch(err => {
-      this.loginError();
-      console.log('Erreur: ' + err);
-    });
-  }
-
   logout() {
     this.afAuth.auth.signOut();
   }

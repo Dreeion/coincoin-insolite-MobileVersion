@@ -6,17 +6,17 @@
     <br><br><br><br>
     <ion-item >
       <ion-label color="light">Pseudo*</ion-label>
-      <ion-input color="light" type="text" placeholder="Pseudonyme"></ion-input>
+      <ion-input color="light" type="text" placeholder="Pseudonyme" ></ion-input>
     </ion-item>
 
     <ion-item >
       <ion-label color="light">Email*</ion-label>
-      <ion-input color="light" type="mail" placeholder="Adresse email"></ion-input>
+      <ion-input color="light" type="mail" placeholder="Adresse email" [(ngModel)]="dataUser.email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="light">Mot de passe*</ion-label>
-      <ion-input color="light" type="password" placeholder="Mot de passe"></ion-input>
+      <ion-input color="light" type="password" placeholder="Mot de passe" [(ngModel)]="dataUser.password"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -24,7 +24,7 @@
       <ion-input color="light" type="password" placeholder="Mot de passe"></ion-input>
     </ion-item>
     <br>
-    <ion-button color="tertiary" expand="block" shape="round">Valider Inscription</ion-button>
+    <ion-button color="tertiary" expand="block" shape="round" (click)="signUp()">Valider Inscription</ion-button>
     <br><br>
     <ion-item lines="none">
       <ion-label color="light" class="ion-text-center">Ou inscrivez-vous avec</ion-label>
