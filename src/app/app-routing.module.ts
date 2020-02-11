@@ -27,7 +27,19 @@ const routes: Routes = [
   {
     path: 'mdp-perdu',
     loadChildren: () => import('./mdp-perdu/mdp-perdu.module').then( m => m.MdpPerduPageModule)
+  },  {
+    path: 'opportunity',
+    loadChildren: () => import('./opportunity/opportunity.module').then( m => m.OpportunityPageModule)
+  },
+  {
+    path: 'curiosity',
+    loadChildren: () => import('./curiosity/curiosity.module').then( m => m.CuriosityPageModule)
+  },
+  {
+    path: 'favoris',
+    loadChildren: () => import('./favoris/favoris.module').then( m => m.FavorisPageModule)
   }
+
 
 
 
