@@ -5,6 +5,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Facebook } from '@ionic-native/facebook/ngx';
 import { Platform } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
+
 @Component({
   selector: 'app-login',
   templateUrl: 'login.page.html',
@@ -24,6 +26,7 @@ export class LoginPage {
   method: any;
 
   constructor(
+    private navCtrl: NavController,
     public afDB: AngularFireDatabase,
     public toastController: ToastController,
     public afAuth: AngularFireAuth,
@@ -63,6 +66,7 @@ export class LoginPage {
         email: '',
         password: ''
       };
+      this.navCtrl.navigateRoot('map');
     }).catch(err => {
       this.loginError();
       console.log('Erreur: ' + err);
@@ -108,6 +112,7 @@ export class LoginPage {
           firebase.auth().signInWithCredential(facebookCredential)
           .then((success) => {
               console.log('Info Facebook: ' + JSON.stringify(success));
+              this.navCtrl.navigateRoot('map');
           }).catch((error) => {
               console.log('Erreur: ' + JSON.stringify(error));
           });
@@ -119,6 +124,7 @@ export class LoginPage {
       .signInWithPopup(new firebase.auth.FacebookAuthProvider())
       .then((success) => {
         console.log('Info Facebook: ' + JSON.stringify(success));
+        this.navCtrl.navigateRoot('map');
       }).catch((error) => {
         console.log('Erreur: ' + JSON.stringify(error));
       });
@@ -129,6 +135,7 @@ export class LoginPage {
   this.afAuth.auth.signInAnonymously().then(() => {
       console.log('Connexion r&eacute;ussie');
       this.loginSuccess();
+      this.navCtrl.navigateRoot('map');
     }).catch(err => {
       this.loginError();
       console.log('Erreur: ' + err);
