@@ -10,8 +10,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
   },
   {
-    path: 'galerie',
-    loadChildren: () => import('./pages/galerie/galerie.module').then( m => m.GaleriePageModule)
+    path: 'social',
+    loadChildren: () => import('./pages/social/social.module').then( m => m.SocialPageModule)
   },
   {
     path: 'carte',

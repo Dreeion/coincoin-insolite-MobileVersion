@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GaleriePageRoutingModule } from './galerie-routing.module';
+import { SocialPageRoutingModule } from './social-routing.module';
 
-import { GaleriePage } from './galerie.page';
+import { SocialPage } from './social.page';
 
 import { TestComponentModule } from '../footer/footer.component.module';
 @NgModule({
@@ -14,9 +14,9 @@ import { TestComponentModule } from '../footer/footer.component.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    GaleriePageRoutingModule,
+    SocialPageRoutingModule,
     TestComponentModule
   ],
-  declarations: [GaleriePage]
+  declarations: [SocialPage]
 })
-export class GaleriePageModule {}
+export class SocialPageModule {}
