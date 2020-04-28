@@ -22,8 +22,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/cgu/cgu.module').then( m => m.CGUPageModule)
   },
   {
-    path: 'inscription',
-    loadChildren: () => import('./pages/inscription/inscription.module').then( m => m.InscriptionPageModule)
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
   {
     path: 'forgetpassword',

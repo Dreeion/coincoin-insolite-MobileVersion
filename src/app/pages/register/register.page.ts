@@ -4,11 +4,11 @@ import { ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
-  selector: 'app-inscription',
-  templateUrl: './inscription.page.html',
-  styleUrls: ['./inscription.page.scss'],
+  selector: 'app-register',
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
-export class InscriptionPage implements OnInit {
+export class RegisterPage implements OnInit {
 
 dataUser = {
       email: '',
