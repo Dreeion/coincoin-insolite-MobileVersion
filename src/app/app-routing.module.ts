@@ -14,8 +14,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/social/social.module').then( m => m.SocialPageModule)
   },
   {
-    path: 'carte',
-    loadChildren: () => import('./pages/carte/carte.module').then( m => m.CartePageModule)
+    path: 'map',
+    loadChildren: () => import('./pages/map/map.module').then( m => m.MapPageModule)
   },
   {
     path: 'cgu',

@@ -5,14 +5,14 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 
 @Component({
-  selector: 'app-carte',
-  templateUrl: './carte.page.html',
-  styleUrls: ['./carte.page.scss'],
+  selector: 'app-map',
+  templateUrl: './map.page.html',
+  styleUrls: ['./map.page.scss'],
 })
 
 
 
-export class CartePage implements OnInit {
+export class MapPage implements OnInit {
 
   constructor(private camera: Camera) {
     sourceType: this.camera.PictureSourceType.CAMERA;

@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CartePageRoutingModule } from './carte-routing.module';
+import { MapPageRoutingModule } from './map-routing.module';
 
-import { CartePage } from './carte.page';
+import { MapPage } from './map.page';
 
 import { TestComponentModule } from '../footer/footer.component.module';
 
@@ -17,10 +17,10 @@ import { DynamicMapComponent } from '../dynamic-map/dynamic-map.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    CartePageRoutingModule,
+    MapPageRoutingModule,
     TestComponentModule
   ],
-  declarations: [CartePage,DynamicMapComponent],
+  declarations: [MapPage,DynamicMapComponent],
   exports : [DynamicMapComponent]
 })
-export class CartePageModule {}
+export class MapPageModule {}
