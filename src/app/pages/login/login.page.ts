@@ -44,7 +44,7 @@ export class LoginPage {
         this.connected = true;
         this.userId = auth.uid;
         this.mail = auth.email;
-        this.method = auth.providerData[0].providerId;
+        /*this.method = auth.providerData[0].providerId;*/
       }
     });
   }
