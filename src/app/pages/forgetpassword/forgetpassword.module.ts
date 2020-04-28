@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MdpPerduPageRoutingModule } from './mdp-perdu-routing.module';
+import { ForgetpasswordPageRoutingModule } from './forgetpassword-routing.module';
 
-import { MdpPerduPage } from './mdp-perdu.page';
+import { ForgetpasswordPage } from './forgetpassword.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MdpPerduPageRoutingModule
+    ForgetpasswordPageRoutingModule
   ],
-  declarations: [MdpPerduPage]
+  declarations: [ForgetpasswordPage]
 })
-export class MdpPerduPageModule {}
+export class ForgetpasswordPageModule {}

@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from "@angular/fire/auth"; 
-import * as firebase from "firebase"; 
+import { AngularFireAuth } from "@angular/fire/auth";
+import * as firebase from "firebase";
 import { ToastController } from '@ionic/angular';
 import {  MenuController } from '@ionic/angular';
 
 
 @Component({
-  selector: 'app-mdp-perdu',
-  templateUrl: './mdp-perdu.page.html',
-  styleUrls: ['./mdp-perdu.page.scss'],
+  selector: 'app-forgetpassword',
+  templateUrl: './forgetpassword.page.html',
+  styleUrls: ['./forgetpassword.page.scss'],
 })
 
-export class MdpPerduPage implements OnInit {
+export class ForgetpasswordPage implements OnInit {
 
     dataUser = {
         email: '',

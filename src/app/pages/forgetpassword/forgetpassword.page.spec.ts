@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { MdpPerduPage } from './mdp-perdu.page';
+import { ForgetpasswordPage } from './forgetpassword.page';
 
-describe('MdpPerduPage', () => {
-  let component: MdpPerduPage;
-  let fixture: ComponentFixture<MdpPerduPage>;
+describe('ForgetpasswordPage', () => {
+  let component: ForgetpasswordPage;
+  let fixture: ComponentFixture<ForgetpasswordPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MdpPerduPage ],
+      declarations: [ ForgetpasswordPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MdpPerduPage);
+    fixture = TestBed.createComponent(ForgetpasswordPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

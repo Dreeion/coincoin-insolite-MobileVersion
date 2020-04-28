@@ -26,8 +26,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/inscription/inscription.module').then( m => m.InscriptionPageModule)
   },
   {
-    path: 'mdp-perdu',
-    loadChildren: () => import('./pages/mdp-perdu/mdp-perdu.module').then( m => m.MdpPerduPageModule)
+    path: 'forgetpassword',
+    loadChildren: () => import('./pages/forgetpassword/forgetpassword.module').then( m => m.ForgetpasswordPageModule)
   }
 
 
