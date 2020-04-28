@@ -124,6 +124,17 @@ export class HomePage {
       });
   }
 
+/* --- --- CONNECTION ANONYME --- --- */
+ anonymeLogin() {
+  this.afAuth.auth.signInAnonymously().then(() => {
+      console.log('Connexion r&eacute;ussie');
+      this.loginSuccess();
+    }).catch(err => {
+      this.loginError();
+      console.log('Erreur: ' + err);
+    });
+}
+
 /* --- --- DECONNECTION --- --- */
 
   logout() {

@@ -40,6 +40,12 @@
         Google
       </ion-button>
     </div>
+    <div class="flex">
+      <ion-button color="anonyme" shape="round" (click)="anonymeLogin()">
+        <ion-icon slot="start" name="person"></ion-icon>
+        Anonyme
+      </ion-button>
+    </div>
   </div>
 </div>
 
@@ -68,5 +74,6 @@
 
     <ion-button expand="block" color="danger" (click)="logout()">DECONNEXION</ion-button>
     <ion-button expand="block" color="primary" href="carte">Lancer CoincoinInsolite</ion-button>
+    
   </div>
 </ion-content>
