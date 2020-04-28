@@ -10,7 +10,7 @@ import { MapPage } from './map.page';
 
 import { TestComponentModule } from '../footer/footer.component.module';
 
-import { DynamicMapComponent } from '../dynamic-map/dynamic-map.component';
+import { DynamicMapComponent } from '../../components/dynamic-map/dynamic-map.component';
 
 @NgModule({
   imports: [
