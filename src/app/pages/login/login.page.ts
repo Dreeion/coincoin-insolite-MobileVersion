@@ -84,7 +84,7 @@ export class LoginPage {
 
   async loginSuccess() {
     const toast = await this.toastController.create({
-      message: 'Vous êtes maintenant connecté.',
+      message: 'Vous Ã¨tes maintenant connectÃ©.',
       position: 'top',
       duration: 2000
     });
