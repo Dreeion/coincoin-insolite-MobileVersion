@@ -1,5 +1,5 @@
 {
-  "name": "CoinCoinInsolite",
+  "name": "coincoininsolite",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -40,6 +40,7 @@
     "firebase": "^7.14.2",
     "font-awesome": "^4.7.0",
     "leaflet": "^1.6.0",
+    "leaflet.markercluster":"^1.4.1",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -100,5 +101,14 @@
     "platforms": [
       "android"
     ]
+  },
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dreeion/coincoin-insolite-mobile.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dreeion/coincoin-insolite-mobile/issues"
   }
 }
