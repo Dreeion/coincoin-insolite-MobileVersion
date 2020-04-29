@@ -11,15 +11,20 @@ import { NavController } from '@ionic/angular';
 })
 export class SettingsPage implements OnInit {
 
-  ngOnInit() {}
-
   constructor(
     public afAuth: AngularFireAuth,
     public toastController: ToastController,
     private navCtrl: NavController
     ) {}
 
-  presentAlert() {
+  dataUser = {
+        email: '',
+        password: ''
+      };
+
+  ngOnInit() {}
+
+  deleteUser() {
     var user = firebase.auth().currentUser;
 
     user.delete().then(() => {
@@ -27,6 +32,18 @@ export class SettingsPage implements OnInit {
     }).catch(function(error) {
       // An error happened.
     });
+  }
+
+  resetPassword() {
+      var user = firebase.auth().currentUser;
+  var newPassword = this.dataUser.password;
+
+  user.updatePassword(newPassword).then(function() {
+    // Update successful.
+    console.log("passwordREset");
+  }).catch(function(error) {
+    // An error happened.
+  });
   }
 
 }
