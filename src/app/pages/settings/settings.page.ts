@@ -40,17 +40,17 @@ export class SettingsPage implements OnInit {
     var user = firebase.auth().currentUser;
     var newPassword = this.dataUser.newPassword;
     var oldPassword = this.dataUser.oldPassword;
-    var password = this.dataUser.password;
-     
-    if (oldPassword === password) {
+    /*var password = this.dataUser.password;*/
+
+    //if (oldPassword === password) {*/
       user.updatePassword(newPassword).then(function() {
         // Update successful.
         console.log("passwordREset");
       }).catch(function(error) {
         // An error happened.
     });
-    }
-    else{console.log('mdp différent');}
+ // }
+ //   else{console.log('mdp différent');}
   }
 
 }

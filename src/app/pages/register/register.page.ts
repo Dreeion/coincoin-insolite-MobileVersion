@@ -27,10 +27,10 @@ dataUser = {
   ) {
     this.afAuth.authState.subscribe(auth => {
       if (!auth) {
-        console.log('non connect�');
+        console.log('non connecté');
         this.connected = false;
       } else {
-        console.log('connect�: ' + auth.uid);
+        console.log('connecté: ' + auth.uid);
         this.connected = true;
         this.userId = auth.uid;
         this.mail = auth.email;
@@ -43,20 +43,22 @@ dataUser = {
   }
 
 signUp() {
-  if (this.dataUser.cgu === true) {
-    this.afAuth.auth.createUserWithEmailAndPassword(this.dataUser.email, this.dataUser.password)
-    .then(() => {
-      console.log('Connexion r�ussie');
-      this.dataUser = {
-        email: '',
-        password: '',
-        cgu: null
-      };
-      this.loginSuccess();
-  }).catch(err => {
-    this.loginError();
-    console.log('Erreur: ' + err);
-  });
+if (this.dataUser.cgu === true) {
+    if (this.dataUser.email !== null && this.dataUser.password !== null) {
+      this.afAuth.auth.createUserWithEmailAndPassword(this.dataUser.email, this.dataUser.password)
+          .then(() => {
+            console.log('Connexion réussie');
+            this.dataUser = {
+              email: '',
+              password: '',
+              cgu: null
+            };
+            this.loginSuccess();
+          }).catch(err => {
+        this.loginError();
+        console.log('Erreur: ' + err);
+      });
+    }
   } else {this.CGUError(); }
 }
 async loginError() {
@@ -70,7 +72,7 @@ async loginError() {
 
   async loginSuccess() {
     const toast = await this.toastController.create({
-      message: 'Vous �tes maintenant inscrit.',
+      message: 'Vous êtes maintenant inscrit.',
       position: 'top',
       duration: 2000
     });
@@ -79,7 +81,7 @@ async loginError() {
 
   async CGUError() {
     const toast = await this.toastController.create({
-      message: 'CGU non valide',
+      message: 'Vous devez accepter les CGU pour pouvoir continuer.',
       position: 'top',
       duration: 2000
     });
