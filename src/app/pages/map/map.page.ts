@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Map, latLng, tileLayer, Layer, marker } from 'leaflet';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
-
+import { LeafletService} from '../../services/leafletService/leaflet-service.service'
 
 
 @Component({
@@ -14,11 +14,12 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 export class MapPage implements OnInit {
 
-  constructor(private camera: Camera) {
+  constructor(
+    private camera: Camera,
+    private leafLetService: LeafletService) {
     sourceType: this.camera.PictureSourceType.CAMERA;
    }
-  map: Map;
-
+ 
 
   image: any = '';
 
@@ -26,23 +27,14 @@ export class MapPage implements OnInit {
 
   leafletMap() {
     // In setView add latLng and zoom
-    this.map = new Map('map', {
-      minZoom: 3,
-      maxZoom: 17
-  }).setView([28.644800, 77.216721], 10);
-    tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'edupala.com © ionic LeafLet',
-    }).addTo(this.map);
-
-
-    marker([28.6, 77]).addTo(this.map)
-      .bindPopup('Ionic 4 <br> Leaflet.')
-      .openPopup();
+    
+    this.leafLetService.generateMap()
+    
   }
 
   /** Remove map when we have multiple map object */
   ionViewWillLeave() {
-    this.map.remove();
+    this.leafLetService.map.remove();
   }
 
   ngOnInit() {
