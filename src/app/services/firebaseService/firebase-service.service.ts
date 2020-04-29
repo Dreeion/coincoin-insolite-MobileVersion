@@ -8,7 +8,7 @@ import { resolve } from 'url';
 })
 export class FirebaseService {
 
-  constructor(
+  constructor( 
       public afDB: AngularFireDatabase,
       public afSG: AngularFireStorage
   ) {
