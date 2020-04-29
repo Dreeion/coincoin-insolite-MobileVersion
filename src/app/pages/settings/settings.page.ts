@@ -19,7 +19,9 @@ export class SettingsPage implements OnInit {
 
   dataUser = {
         email: '',
-        password: ''
+        password: '',
+        newPassword: '',
+        oldPassword: '',
       };
 
   ngOnInit() {}
@@ -35,15 +37,20 @@ export class SettingsPage implements OnInit {
   }
 
   resetPassword() {
-      var user = firebase.auth().currentUser;
-  var newPassword = this.dataUser.password;
-
-  user.updatePassword(newPassword).then(function() {
-    // Update successful.
-    console.log("passwordREset");
-  }).catch(function(error) {
-    // An error happened.
-  });
+    var user = firebase.auth().currentUser;
+    var newPassword = this.dataUser.newPassword;
+    var oldPassword = this.dataUser.oldPassword;
+    var password = this.dataUser.password;
+     
+    if (oldPassword === password) {
+      user.updatePassword(newPassword).then(function() {
+        // Update successful.
+        console.log("passwordREset");
+      }).catch(function(error) {
+        // An error happened.
+    });
+    }
+    else{console.log('mdp différent');}
   }
 
 }
