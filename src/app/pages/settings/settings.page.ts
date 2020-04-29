@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
+import { ToastController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-settings',
@@ -10,15 +13,20 @@ export class SettingsPage implements OnInit {
 
   ngOnInit() {}
 
-  constructor(public alertController: AlertController) {}
+  constructor(
+    public afAuth: AngularFireAuth,
+    public toastController: ToastController,
+    private navCtrl: NavController
+    ) {}
 
-  async presentAlert() {
-    const alert = await this.alertController.create({
-      header: 'Alerte',
-      subHeader: 'Voulez-vous vraiment supprimer votre compte ?',
-      buttons: ['NON', 'OUI'],
+  presentAlert() {
+    var user = firebase.auth().currentUser;
+
+    user.delete().then(() => {
+      this.navCtrl.navigateRoot('pages/login');
+    }).catch(function(error) {
+      // An error happened.
     });
-
-    await alert.present();
   }
+
 }

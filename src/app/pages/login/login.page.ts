@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
@@ -27,7 +26,6 @@ export class LoginPage {
 
   constructor(
     private navCtrl: NavController,
-    public afDB: AngularFireDatabase,
     public toastController: ToastController,
     public afAuth: AngularFireAuth,
     private fb: Facebook,
