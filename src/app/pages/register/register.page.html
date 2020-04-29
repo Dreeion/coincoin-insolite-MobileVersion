@@ -23,6 +23,11 @@
       <ion-label color="light">Confirmer Mot de passe*</ion-label>
       <ion-input color="light" type="password" placeholder="Mot de passe"></ion-input>
     </ion-item>
+
+    <ion-item>
+      <ion-checkbox color="light"></ion-checkbox>
+      <ion-label color="light" [(ngModel)]="dataUser.cgu">J'accepte les CGU</ion-label>
+    </ion-item>
     <br>
     <ion-button color="tertiary" expand="block" shape="round" (click)="signUp()">Valider Inscription</ion-button>
     <br><br>

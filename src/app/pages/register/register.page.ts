@@ -12,7 +12,8 @@ export class RegisterPage implements OnInit {
 
 dataUser = {
       email: '',
-      password: ''
+      password: '',
+      cgu: null
     };
   connected: boolean;
   userId: string;
@@ -26,10 +27,10 @@ dataUser = {
   ) {
     this.afAuth.authState.subscribe(auth => {
       if (!auth) {
-        console.log('non connecté');
+        console.log('non connectï¿½');
         this.connected = false;
       } else {
-        console.log('connecté: ' + auth.uid);
+        console.log('connectï¿½: ' + auth.uid);
         this.connected = true;
         this.userId = auth.uid;
         this.mail = auth.email;
@@ -42,19 +43,28 @@ dataUser = {
   }
 
 signUp() {
+    if (this.dataUser.cgu == null) {
+      const toast = await this.toastController.create({
+        message: 'Adresse email ou mot de passe incorrect.',
+        position: 'top',
+        duration: 2000
+      });
+      toast.present();
+    }
     this.afAuth.auth.createUserWithEmailAndPassword(this.dataUser.email, this.dataUser.password)
-    .then(() => {
-      console.log('Connexion réussie');
-      this.dataUser = {
-        email: '',
-        password: ''
-      };
-      this.loginSuccess();
-    }).catch(err => {
-      this.loginError();
-      console.log('Erreur: ' + err);
-    });
-  }
+  .then(() => {
+    console.log('Connexion rï¿½ussie');
+    this.dataUser = {
+      email: '',
+      password: '',
+      cgu: null
+    };
+    this.loginSuccess();
+  }).catch(err => {
+    this.loginError();
+    console.log('Erreur: ' + err);
+  });
+}
 async loginError() {
     const toast = await this.toastController.create({
       message: 'Adresse email ou mot de passe incorrect.',
@@ -66,7 +76,7 @@ async loginError() {
 
   async loginSuccess() {
     const toast = await this.toastController.create({
-      message: 'Vous êtes maintenant inscrit.',
+      message: 'Vous ï¿½tes maintenant inscrit.',
       position: 'top',
       duration: 2000
     });
