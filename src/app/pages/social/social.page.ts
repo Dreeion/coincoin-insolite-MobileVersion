@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {AngularFireDatabase, AngularFireDatabaseModule} from '@angular/fire/database';
-import { AngularFireStorage } from '@angular/fire/storage';
+import { Component } from '@angular/core';
+import {FirebaseService} from "../../services/firebaseService/firebase-service.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-social',
@@ -12,28 +12,14 @@ export class SocialPage {
   images = [];
 
   constructor(
-      public afDB: AngularFireDatabase,
-      public afSG: AngularFireStorage
+      private firebase: FirebaseService
   ) {
-    this.getImagesDatabase();
+    this.readImages();
   }
 
-  getImagesDatabase() {
-    this.afDB.list('Images/').snapshotChanges(['child_added']).subscribe(images => {
-      images.forEach(image => {
-        this.getImagesStorage(image);
-      });
-    });
+  readImages() {
+    return this.firebase.getImagesDatabase(this.images);
   }
 
-  getImagesStorage(image: any) {
-    const imgRef = image.payload.exportVal().ref;
-    this.afSG.ref(imgRef).getDownloadURL().subscribe(imgUrl => {
-      this.images.push({
-        name: image.payload.exportVal().name,
-        url: imgUrl
-      })
-;    });
-  }
 
 }

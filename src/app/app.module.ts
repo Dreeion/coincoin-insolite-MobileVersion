@@ -27,6 +27,7 @@ export const firebaseConfig = {
 };
 
 import { Facebook } from '@ionic-native/facebook/ngx';
+import {FirebaseService} from "./services/firebaseService/firebase-service.service";
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { Facebook } from '@ionic-native/facebook/ngx';
     Facebook,
     StatusBar,
     SplashScreen,
+    FirebaseService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
