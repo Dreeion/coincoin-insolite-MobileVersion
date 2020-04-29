@@ -11,15 +11,22 @@ import { NavController } from '@ionic/angular';
 })
 export class SettingsPage implements OnInit {
 
-  ngOnInit() {}
-
   constructor(
     public afAuth: AngularFireAuth,
     public toastController: ToastController,
     private navCtrl: NavController
     ) {}
 
-  presentAlert() {
+  dataUser = {
+        email: '',
+        password: '',
+        newPassword: '',
+        oldPassword: '',
+      };
+
+  ngOnInit() {}
+
+  deleteUser() {
     var user = firebase.auth().currentUser;
 
     user.delete().then(() => {
@@ -27,6 +34,23 @@ export class SettingsPage implements OnInit {
     }).catch(function(error) {
       // An error happened.
     });
+  }
+
+  resetPassword() {
+    var user = firebase.auth().currentUser;
+    var newPassword = this.dataUser.newPassword;
+    var oldPassword = this.dataUser.oldPassword;
+    var password = this.dataUser.password;
+     
+    if (oldPassword === password) {
+      user.updatePassword(newPassword).then(function() {
+        // Update successful.
+        console.log("passwordREset");
+      }).catch(function(error) {
+        // An error happened.
+    });
+    }
+    else{console.log('mdp différent');}
   }
 
 }
