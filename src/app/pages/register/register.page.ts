@@ -13,7 +13,7 @@ export class RegisterPage implements OnInit {
 dataUser = {
       email: '',
       password: '',
-      cgu: null
+      cgu: false
     };
   connected: boolean;
   userId: string;
@@ -43,27 +43,21 @@ dataUser = {
   }
 
 signUp() {
-    if (this.dataUser.cgu == null) {
-      const toast = await this.toastController.create({
-        message: 'Adresse email ou mot de passe incorrect.',
-        position: 'top',
-        duration: 2000
-      });
-      toast.present();
-    }
+  if (this.dataUser.cgu === true) {
     this.afAuth.auth.createUserWithEmailAndPassword(this.dataUser.email, this.dataUser.password)
-  .then(() => {
-    console.log('Connexion r�ussie');
-    this.dataUser = {
-      email: '',
-      password: '',
-      cgu: null
-    };
-    this.loginSuccess();
+    .then(() => {
+      console.log('Connexion r�ussie');
+      this.dataUser = {
+        email: '',
+        password: '',
+        cgu: null
+      };
+      this.loginSuccess();
   }).catch(err => {
     this.loginError();
     console.log('Erreur: ' + err);
   });
+  } else {this.CGUError(); }
 }
 async loginError() {
     const toast = await this.toastController.create({
@@ -77,6 +71,15 @@ async loginError() {
   async loginSuccess() {
     const toast = await this.toastController.create({
       message: 'Vous �tes maintenant inscrit.',
+      position: 'top',
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  async CGUError() {
+    const toast = await this.toastController.create({
+      message: 'CGU non valide',
       position: 'top',
       duration: 2000
     });
