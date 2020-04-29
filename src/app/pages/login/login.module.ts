@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { LoginPage } from './login.page';
-import { TestComponentModule } from '../footer/footer.component.module';
+import { TestComponentModule } from '../../components/footer/footer.component.module';
 
 @NgModule({
   imports: [

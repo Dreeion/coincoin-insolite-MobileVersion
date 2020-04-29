@@ -8,7 +8,7 @@ import { SocialPageRoutingModule } from './social-routing.module';
 
 import { SocialPage } from './social.page';
 
-import { TestComponentModule } from '../footer/footer.component.module';
+import { TestComponentModule } from '../../components/footer/footer.component.module';
 @NgModule({
   imports: [
     CommonModule,

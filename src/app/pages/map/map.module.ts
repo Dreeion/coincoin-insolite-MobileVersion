@@ -8,7 +8,7 @@ import { MapPageRoutingModule } from './map-routing.module';
 
 import { MapPage } from './map.page';
 
-import { TestComponentModule } from '../footer/footer.component.module';
+import { TestComponentModule } from '../../components/footer/footer.component.module';
 
 import { DynamicMapComponent } from '../../components/dynamic-map/dynamic-map.component';
 
