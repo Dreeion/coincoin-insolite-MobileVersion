@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Map, latLng, tileLayer, Layer, marker } from 'leaflet';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { LeafletService} from '../../services/leafletService/leaflet-service.service'
-
+import { PhotoService } from '../../services/photoService/photo.service'
+import { FirebaseService } from '../../services/firebaseService/firebase-service.service'
 
 @Component({
   selector: 'app-map',
@@ -16,7 +17,10 @@ export class MapPage {
 
   constructor(
     private camera: Camera,
-    private leafLetService: LeafletService) {
+    private leafLetService: LeafletService,
+    private photoService: PhotoService,
+    private firebaseService:FirebaseService
+    ) {
     sourceType: this.camera.PictureSourceType.CAMERA;
    }
  
@@ -40,25 +44,8 @@ export class MapPage {
     this.leafLetService.initGMarker();
   }
 
-  openCam() {
-    const options: CameraOptions = {
-      quality: 100,
-      destinationType: this.camera.DestinationType.FILE_URI,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
-    };
-
-    this.camera.getPicture(options).then((imageData) => {
-     // imageData is either a base64 encoded string or a file URI
-     // If it's base64 (DATA_URL):
-     // alert(imageData)
-     this.image = ( window as any).Ionic.WebView.convertFileSrc(imageData);
-    }, (err) => {
-     // Handle error
-     alert('error ' + JSON.stringify(err));
-    });
-
+  takePicture() {
+    this.photoService.selectImage()
   }
-
 }
 

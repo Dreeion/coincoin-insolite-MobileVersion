@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Camera, CameraOptions, PictureSourceType} from '@ionic-native/camera/ngx';
 import { ActionSheetController, ToastController, Platform } from '@ionic/angular';
 import { FilePath } from '@ionic-native/file-path/ngx';
+import { FirebaseService } from '../firebaseService/firebase-service.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,11 +12,13 @@ export class PhotoService {
     public actionSheetController: ActionSheetController,
     private camera: Camera,
     private plt: Platform,
-    private filePath: FilePath
+    private filePath: FilePath,
+    private firebase : FirebaseService
   ) { }
 
 
   async selectImage(){
+    
     const actionSheet = await this.actionSheetController.create({
       
       header: "Sélectionner la source de l'image",
@@ -23,25 +26,34 @@ export class PhotoService {
         {
           text : "Ouvrir la bibliothèque",
           handler : ()=>{
-            this.takePicture(this.camera.PictureSourceType.PHOTOLIBRARY)
+              this.takePicture(this.camera.PictureSourceType.PHOTOLIBRARY).then(val => {
+                //callback(val)
+              })
           }
         },
         {
           text : "Ouvrir l'appareil photo",
-          handler : ()=>{
-            this.takePicture(this.camera.PictureSourceType.CAMERA)
+          handler : ()=>{ 
+              this.takePicture(this.camera.PictureSourceType.CAMERA).then(val => {
+                console.log(val)
+                this.firebase.uploadImage(val)
+              })
           }
         },
         {
           text : "Annuler",
-          role: "cancel"
+          role: "cancel",
+          handler : ()=>{
+          
+          }
         }
       ]
     })
     await actionSheet.present()
+    
   }
 
-  takePicture(sourceType: PictureSourceType){
+  takePicture(sourceType: PictureSourceType) : any{
     return new Promise ((resolve) => {
     var options: CameraOptions = {
       quality: 100,
