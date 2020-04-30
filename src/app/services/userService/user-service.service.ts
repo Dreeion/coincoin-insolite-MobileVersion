@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
-import { FirebaseService } from '../firebaseService/firebase-service.service'
+import * as firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  constructor(){
+  constructor(
+  ){
+  }
+
+  getCurrentUserId() {
+    return firebase.auth().currentUser.uid
   }
 
 }

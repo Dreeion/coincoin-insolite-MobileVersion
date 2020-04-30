@@ -2,6 +2,8 @@ import {AngularFireDatabase} from '@angular/fire/database';
 import { AngularFireStorage } from '@angular/fire/storage';
 import {Injectable} from "@angular/core";
 import { resolve } from 'url';
+import * as firebase from "firebase";
+import {AngularFireAuth} from "@angular/fire/auth";
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +15,15 @@ export class FirebaseService {
       public afSG: AngularFireStorage
   ) {
   }
+
+  dataUser = {
+    email: '',
+    password: '',
+    newPassword: '',
+    oldPassword: '',
+    pseudo: '',
+    uid: ''
+  };
 
   getImagesDatabase(getImages) {
     this.afDB.list('Images/').snapshotChanges(['child_added']).subscribe(images => {
@@ -46,5 +57,15 @@ export class FirebaseService {
     });
   }
 
+  getImagesUserDatabase(images, uid, getImages) {
+    var userId = this.afDB.list(images, ref => ref.orderByChild('uid').equalTo(uid));
+    if (userId != null) {
+      return this.afDB.list(images, ref => ref.orderByChild('uid').equalTo(uid)).snapshotChanges(['child_added']).subscribe(images => {
+        images.forEach(image => {
+          this.getImagesStorage(image, getImages);
+        });
+      });
+    }
+  }
 
 }
