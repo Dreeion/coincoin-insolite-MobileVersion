@@ -14,6 +14,10 @@ export class LeafletService {
   constructor(
     private firebaseService: FirebaseService
   ) { 
+    this.initGMarker()
+  }
+
+  initGMarker(){
     this.g_marker = L.markerClusterGroup({
       
       spiderfyOnMaxZoom: false,
@@ -31,7 +35,6 @@ export class LeafletService {
       }
     });
   }
-
   generateMap(){
     this.map = L.map('map', {
       minZoom: 3,
