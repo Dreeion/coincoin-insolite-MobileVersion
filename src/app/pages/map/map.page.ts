@@ -12,7 +12,7 @@ import { LeafletService} from '../../services/leafletService/leaflet-service.ser
 
 
 
-export class MapPage implements OnInit {
+export class MapPage {
 
   constructor(
     private camera: Camera,
@@ -23,7 +23,9 @@ export class MapPage implements OnInit {
 
   image: any = '';
 
-  ionViewDidEnter() { this.leafletMap(); }
+  ionViewDidEnter() { 
+    this.leafletMap(); 
+  }
 
   leafletMap() {
     // In setView add latLng and zoom
@@ -35,9 +37,7 @@ export class MapPage implements OnInit {
   /** Remove map when we have multiple map object */
   ionViewWillLeave() {
     this.leafLetService.map.remove();
-  }
-
-  ngOnInit() {
+    this.leafLetService.initGMarker();
   }
 
   openCam() {

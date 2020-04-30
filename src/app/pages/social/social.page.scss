@@ -14,11 +14,13 @@
 }
 
 .content_img{
-  overflow-x: auto;
-  white-space: nowrap;
   margin: 0;
   padding: 0;
-  display: inline-block;
+  display: table-cell;
+}
+
+.scroll {
+  overflow-x: auto;
 }
 
 .content_img img{
