@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -52,6 +53,7 @@ import {FirebaseService} from "./services/firebaseService/firebase-service.servi
     StatusBar,
     SplashScreen,
     FirebaseService,
+    FilePath,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

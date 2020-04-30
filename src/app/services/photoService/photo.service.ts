@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Camera, CameraOptions, PictureSourceType} from '@ionic-native/Camera/ngx';
+import { Camera, CameraOptions, PictureSourceType} from '@ionic-native/camera/ngx';
 import { ActionSheetController, ToastController, Platform } from '@ionic/angular';
 import { FilePath } from '@ionic-native/file-path/ngx';
 @Injectable({
@@ -42,6 +42,7 @@ export class PhotoService {
   }
 
   takePicture(sourceType: PictureSourceType){
+    return new Promise ((resolve) => {
     var options: CameraOptions = {
       quality: 100,
       sourceType: sourceType,
@@ -54,14 +55,17 @@ export class PhotoService {
               .then(filePath => {
                   let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
                   let currentName = imagePath.substring(imagePath.lastIndexOf('/') + 1, imagePath.lastIndexOf('?'));
+                  resolve(correctPath)
                   //this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
               });
       } else {
           var currentName = imagePath.substr(imagePath.lastIndexOf('/') + 1);
           var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/') + 1);
+          resolve(correctPath)
           //this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
       }
-  });
+    });
+    })
   }
   
 }
