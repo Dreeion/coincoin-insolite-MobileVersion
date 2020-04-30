@@ -14,6 +14,10 @@ export class LeafletService {
   constructor(
     private firebaseService: FirebaseService
   ) { 
+    this.initGMarker()
+  }
+
+  initGMarker(){
     this.g_marker = L.markerClusterGroup({
       
       spiderfyOnMaxZoom: false,
@@ -23,7 +27,7 @@ export class LeafletService {
       iconCreateFunction: function(cluster) {
         return L.divIcon(
           { 
-            html: '<img class="duck" style="transform: translate(-45%, -75%);width: 80px;" src="assets/icons/marker_littlecoincoin.png" > <p style="position: absolute;top: -490%;left: 15%;color: black;font-size: 16px;font-weight: bold;font-family: serif;" >' + cluster.getChildCount() + '</p>',
+            html: '<img class="duck" style="transform: translate(-45%, -75%);width: 80px;" src="assets/icons/marker_littlecoincoin.png" > <p style="position: absolute;top: -58%;left: 2%;color: black;font-size: 16px;font-weight: bold;font-family: serif;" >' + cluster.getChildCount() + '</p>',
             //html : cluster.getChildCount(),
             className: 'mycluster', 
             iconSize: null 
@@ -31,7 +35,6 @@ export class LeafletService {
       }
     });
   }
-
   generateMap(){
     this.map = L.map('map', {
       minZoom: 3,
