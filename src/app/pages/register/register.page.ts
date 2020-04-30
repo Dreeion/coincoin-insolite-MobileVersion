@@ -15,12 +15,14 @@ dataUser = {
       email: '',
       password: '',
       cgu: false,
-      pseudo: ''
+      pseudo: '',
+      confirmPassword: ''
     };
   connected: boolean;
   userId: string;
   mail: string;
   method: any;
+  
 
   constructor(
     public afDB: AngularFireDatabase,
@@ -45,8 +47,8 @@ dataUser = {
   }
 
 signUp() {
-if (this.dataUser.cgu === true) {
-    if (this.dataUser.email !== null && this.dataUser.password !== null) {
+if (this.dataUser.cgu === true && this.dataUser.password === this.dataUser.confirmPassword) {
+    if (this.dataUser.email !== null && this.dataUser.password !== null && this.dataUser.pseudo !== null) {
       this.afAuth.auth.createUserWithEmailAndPassword(this.dataUser.email, this.dataUser.password)
           .then(() => {
             console.log('Connexion réussie');
