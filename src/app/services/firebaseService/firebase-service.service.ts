@@ -53,7 +53,7 @@ export class FirebaseService {
     });
   }
 
-  uploadImage( image: string) {
+  async uploadImage( image: string) {
     const imagePath = new Date().getTime() + '.jpg'; // nom de l'image dans storage
     this.afAuth.authState.subscribe(auth => {
       const newPostKey = firebase.database().ref().child('Users').push().key; // création de la clé dans la database
