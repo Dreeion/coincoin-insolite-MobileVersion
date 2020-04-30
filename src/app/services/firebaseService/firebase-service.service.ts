@@ -62,8 +62,8 @@ export class FirebaseService {
         url: imagePath
       }
 
-      updates['/user-images/' + auth.uid + '/' + newPostKey ] = postData;
-      updates['/Images/' + newPostKey ] = postData;
+      /*updates['/user-images/' + auth.uid + '/' + newPostKey ] = postData;
+      updates['/Images/' + newPostKey ] = postData;*/
       const upload = this.afSG.ref(imagePath).putString(image, 'data_url'); // upload de l'image dans storage
       return firebase.database().ref().update(updates);
     });
