@@ -22,9 +22,12 @@ export class SettingsPage implements OnInit {
         password: '',
         newPassword: '',
         oldPassword: '',
+        pseudo: '',
+        uid: ''
       };
 
-  ngOnInit() {}
+  ngOnInit() {
+      }
 
   deleteUser() {
     var user = firebase.auth().currentUser;
@@ -43,9 +46,9 @@ export class SettingsPage implements OnInit {
     /*var password = this.dataUser.password;*/
 
     //if (oldPassword === password) {*/
-      user.updatePassword(newPassword).then(function() {
+    user.updatePassword(newPassword).then(function() {
         // Update successful.
-        console.log("passwordREset");
+        console.log('passwordReset');
       }).catch(function(error) {
         // An error happened.
     });
@@ -53,4 +56,20 @@ export class SettingsPage implements OnInit {
  //   else{console.log('mdp différent');}
   }
 
+resetPseudo() {
+  this.afAuth.authState.subscribe(auth => {
+          var postData = {
+    pseudo: this.dataUser.pseudo,
+  };
+          var newPostKey = firebase.database().ref().child('Users').push().key;
+          var updates = {};
+          updates['/Users/' + auth.uid ] = postData;
+
+          return firebase.database().ref().update(updates);
+})
+
+}
+
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  
 }
