@@ -58,9 +58,13 @@ export class FirebaseService {
     this.afAuth.authState.subscribe(auth => {
       const newPostKey = firebase.database().ref().child('Users').push().key; // création de la clé dans la database
       const updates = {};
-      updates['/user-images/' + auth.uid + '/' + newPostKey ] = imagePath;
-      updates['/Images/' + newPostKey ] = imagePath; 
-      const upload = this.afSG.ref(imagePath).putString(image, 'data_url'); //upload de l'image dans storage
+      const postData = {
+        url: imagePath
+      }
+
+      updates['/user-images/' + auth.uid + '/' + newPostKey ] = postData;
+      updates['/Images/' + newPostKey ] = postData;
+      const upload = this.afSG.ref(imagePath).putString(image, 'data_url'); // upload de l'image dans storage
       return firebase.database().ref().update(updates);
     });
   }
