@@ -3,6 +3,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -25,6 +26,7 @@ dataUser = {
   
 
   constructor(
+    private navCtrl: NavController,
     public afDB: AngularFireDatabase,
     public toastController: ToastController,
     public afAuth: AngularFireAuth
@@ -62,6 +64,7 @@ if (this.dataUser.cgu === true && this.dataUser.password === this.dataUser.confi
         return firebase.database().ref().update(updates);
 });
             this.loginSuccess();
+            this.navCtrl.navigateRoot('pages/login');
           }).catch(err => {
         this.loginError();
         console.log('Erreur: ' + err);
