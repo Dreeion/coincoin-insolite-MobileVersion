@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +14,8 @@ export class RegisterPage implements OnInit {
 dataUser = {
       email: '',
       password: '',
-      cgu: false
+      cgu: false,
+      pseudo: ''
     };
   connected: boolean;
   userId: string;
@@ -48,11 +50,15 @@ if (this.dataUser.cgu === true) {
       this.afAuth.auth.createUserWithEmailAndPassword(this.dataUser.email, this.dataUser.password)
           .then(() => {
             console.log('Connexion réussie');
-            this.dataUser = {
-              email: '',
-              password: '',
-              cgu: null
-            };
+
+            this.afAuth.authState.subscribe(auth => {
+        const postData = {
+          pseudo: this.dataUser.pseudo,
+        };
+        const updates = {};
+        updates['/Users/' + auth.uid ] = postData;
+        return firebase.database().ref().update(updates);
+});
             this.loginSuccess();
           }).catch(err => {
         this.loginError();
