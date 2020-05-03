@@ -21,11 +21,11 @@ export class SocialPage {
   }
 
   readImages() {
-    return this.firebase.getImagesDatabase(this.images);
+    return this.firebase.getImagesDatabase(this.images, 'Images', null);
   }
 
   getImagesUser() {
-    return this.firebase.getImagesUserDatabase('Images/', this.user.getCurrentUserId(), this.imagesUser);
+    return this.firebase.getImagesUserDatabase('user-images', this.user.getCurrentUserId(), this.imagesUser);
   }
 
 

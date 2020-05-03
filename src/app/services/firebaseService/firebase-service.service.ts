@@ -1,9 +1,7 @@
 import {AngularFireDatabase} from '@angular/fire/database';
 import { AngularFireStorage } from '@angular/fire/storage';
 import {Injectable} from "@angular/core";
-import { resolve } from 'url';
 import * as firebase from "firebase";
-import {AngularFireAuth} from "@angular/fire/auth";
 
 @Injectable({
   providedIn: 'root'
@@ -16,19 +14,10 @@ export class FirebaseService {
   ) {
   }
 
-  dataUser = {
-    email: '',
-    password: '',
-    newPassword: '',
-    oldPassword: '',
-    pseudo: '',
-    uid: ''
-  };
-
-  getImagesDatabase(getImages) {
-    this.afDB.list('Images/').snapshotChanges(['child_added']).subscribe(images => {
+  getImagesDatabase(getImages, folder, key) {
+    this.afDB.list(folder + '/').snapshotChanges(['child_added']).subscribe(images => {
       images.forEach(image => {
-        this.getImagesStorage(image, getImages);
+        this.getImagesStorage(image, getImages, key);
       });
     });
   }
@@ -47,25 +36,31 @@ export class FirebaseService {
     })
   }
 
-  getImagesStorage(image: any, images: any) {
+  getImagesStorage(image: any, images: any, key) {
     const imgRef = image.payload.exportVal().ref;
     this.afSG.ref(imgRef).getDownloadURL().subscribe(imgUrl => {
-      images.push({
-        name: image.payload.exportVal().name,
-        url: imgUrl
-      });
+      if (key == null) {
+        images.push({
+          name: image.payload.exportVal().name,
+          url: imgUrl
+        });
+      } else {
+        if (key == image.payload.key) {
+          images.push({
+            name: image.payload.exportVal().name,
+            url: imgUrl
+          });
+        }
+      }
     });
   }
 
-  getImagesUserDatabase(images, uid, getImages) {
-    var userId = this.afDB.list(images, ref => ref.orderByChild('uid').equalTo(uid));
-    if (userId != null) {
-      return this.afDB.list(images, ref => ref.orderByChild('uid').equalTo(uid)).snapshotChanges(['child_added']).subscribe(images => {
-        images.forEach(image => {
-          this.getImagesStorage(image, getImages);
+  getImagesUserDatabase(folder, uid, images) {
+    firebase.database().ref(folder + '/' + uid).once('value')
+        .then((snapshot) => {
+          var image = Object.keys(snapshot.val());
+          var key = '-' + Object.values(image)[0];
+          this.getImagesDatabase(images, 'Images', key);
         });
-      });
-    }
   }
-
 }
