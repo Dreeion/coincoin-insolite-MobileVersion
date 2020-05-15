@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { CGUPageRoutingModule } from './cgu-routing.module';
 
 import { CGUPage } from './cgu.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CGUPageRoutingModule
+    CGUPageRoutingModule,
+    TranslateModule
   ],
   declarations: [CGUPage]
 })

@@ -1,0 +1,158 @@
+{
+  "LOGIN": {
+    "mail": {
+      "title": "Email",
+      "placeholder": "Email address"
+    },
+    "password": {
+      "title": "Password",
+      "placeholder": "Password"
+    },
+    "button": {
+      "login": "Login",
+      "register": "Register"
+    },
+    "forgetpwd": "Forgot password?",
+    "orconnect": "Or connect with",
+    "facebook": "Facebook",
+    "google": "Google",
+    "anon": "Anonymous"
+  },
+  "REGISTER": {
+    "username": {
+      "title": "Username*",
+      "placeholder": "Enter your username"
+    },
+    "mail": {
+      "title": "Email*",
+      "placeholder": "Enter your email address"
+    },
+    "password": {
+      "title": "Password*",
+      "placeholder": "Enter a password"
+    },
+    "cpassword": {
+      "title": "Confirm password*",
+      "placeholder": "Confirm your password"
+    },
+    "cgu": "I accept the General Terms of Use",
+    "validate": "Confirm registration"
+  },
+  "MAP": {
+    "search": "Enter a city"
+  },
+  "FORGETPWD": {
+    "mail": {
+      "title": "Email*",
+      "placeholder": "Enter your email address"
+    },
+    "validate": "Send recovery email"
+  },
+  "SETTINGS": {
+    "title": "Settings",
+    "notification": {
+      "title": "Notification",
+      "near": "Near a visited place",
+      "newsletter": "Newsletters"
+    },
+    "username": {
+      "title": "Change username",
+      "placeholder": "Enter your new username",
+      "validate": "Change my username"
+    },
+    "password": {
+      "title": "Change password",
+      "placeholder": "Enter your new password",
+      "validate": "Change my password"
+    },
+    "profile": {
+      "title": "Select a profile picture"
+    },
+    "lang": {
+      "title": "Select your language"
+    },
+    "delete": "Delete my account",
+    "logout": "Logout",
+    "cgu": "General Terms of Use"
+  },
+  "SOCIAL": {
+    "title": "Travel to...",
+    "search": "Enter the city",
+    "highlight": "Places often visited",
+    "pictures": {
+      "title": "My pictures",
+      "name": "Name",
+      "date": "Date"
+    }
+  },
+  "CGU": {
+    "title": "About",
+    "cgu": {
+      "title": "General Terms of Use",
+      "1": {
+        "title": "1. About us",
+        "content": "The Company COINCOINS INSOLITE, SAS, with capital of 1 euro, whose registered office is at ORVAULT (44114) 213 Route de Rennes, registered with the ORVAULT Trade and Companies Register under number 123 456 789, represented by Mr. Maël DEBON (hereinafter the \"Company\").\n    The Company offers the following services: Provide a mobile application allowing hikers to easily locate and visit unusual places around them."
+      },
+      "2": {
+        "title": "2. Preamble",
+        "content": " The Company invites its Users to carefully read these General Terms and Conditions of Use (hereinafter the \"GTC\"). The GCU apply to all Services provided by the Company to its Users of the same category, regardless of the clauses that may be included on the User's documents.\n    The TOS are systematically communicated to the User upon request."
+      },
+      "3": {
+        "title": "3. Definitions",
+        "content": "\"General Terms and Conditions of Use\" or \"GTCU\" refers to these online general terms and conditions of use;\n    \"Services\" refers to all services offered to Users by the Company through this Application;\n    \"Application\" means this Application, i.e. dreion.fr;\n    \"Company\" refers to the Company COINCOINS INSOLITE, more fully described in Article I hereof; and\n    \"User\" means any person who uses the Application."
+      },
+      "4": {
+        "title": "4. Registration",
+        "content": "Registration to the Application is open to all legal or natural persons.\n    Use of the Services offered on the Application is conditional upon the User's registration on the Application. Registration is free of charge.\n    To proceed with registration, the User must fill in all the mandatory fields, without which the service cannot be delivered. Otherwise, the registration cannot be completed.\n    Users guarantee and declare on their honour that all information communicated on the Application, in particular during registration, is accurate and true. They undertake to update their personal information from the page dedicated to them and available in their account.\n    All registered Users have a login and a password. The latter are strictly personal and confidential and must not be communicated to third parties under penalty of deletion of the account of the registered User in breach. Each Registered User is personally responsible for maintaining the confidentiality of his or her login and password. The Company shall in no way be held responsible for the usurpation of a User's identity. If a User suspects fraud at any time, he or she must contact the Company as soon as possible so that the Company can take the necessary measures and regularise the situation.\n    Each User, whether a legal entity or an individual, may only hold one account on the Application.\n    In the event of non-compliance with the TOS, in particular the creation of several accounts for a single person or the provision of false information, the Company reserves the right to proceed with the temporary or permanent deletion of all accounts created by the offending Registered User.\n    The deletion of the account will result in the permanent loss of all benefits and services acquired on the Application.\n    In the event of deletion of an account by the Company for failure to comply with the duties and obligations set forth in the TOS, the offending User is formally prohibited from re-registering on the Application directly, through another email address or through an intermediary without the express authorization of the Company."
+      },
+      "5": {
+        "title": "5. Delivery of services",
+        "content": "The Services covered by the TOS are those that appear on the Application and that are offered directly by the Company or its partner service providers.\n    The Services are described on the corresponding page within the Application and mention is made of all their essential characteristics. The Company shall not be held liable for the impossibility of providing said services when the User is not eligible."
+      },
+      "6": {
+        "title": "6. Processing of personal data",
+        "content": "Registration on the Application entails the processing of the User's personal data. If the User refuses the processing of his/her data, he/she is asked to refrain from using the Application.\n    This processing of personal data is carried out in accordance with the General Data Protection Regulations 2016/679 of 27 April 2016.\n    In addition, in accordance with the French Data Protection Act of 6 January 1978, the User has the right to question, access, correct, modify and oppose all of his personal data at any time by writing, by post and with proof of identity, to the following address: support@dreion.fr.\n    This personal data is necessary to improve the functionality of the Application."
+      },
+      "7": {
+        "title": "7. Data sharing",
+        "content": "The Application may use third party companies to carry out certain transactions. By browsing the Application, the User accepts that third party companies may have access to his data to enable the proper functioning of the Application.\n    These third party companies have access to the data collected only in the context of the performance of a specific task.\n    The Application remains responsible for the processing of this data.\n    In addition, the User may therefore receive information or commercial offers from the Company or its partners.\n    The User may at any time oppose the receipt of these commercial offers by writing to the Company's address indicated above, or by clicking on the link provided for this purpose within the emails received.\n    In addition, Users' information may be transmitted to third parties without their prior express consent in order to achieve the following purposes:\n    to respect the law\n    to protect any person from serious bodily harm or death\n    fight against fraud or attacks on the Company or its users\n    protect the Company's property rights."
+      },
+      "8": {
+        "title": "8. Data protection",
+        "content": "The Company ensures an appropriate level of security, proportional to the risks incurred and their probability, in accordance with the General Data Protection Regulation 2016/679 of 27 April 2016.\n    However, these measures in no way constitute a guarantee and do not commit the Company to an obligation of result regarding data security."
+      },
+      "9": {
+        "title": "9. Cookies",
+        "content": "To enable its Users to benefit from optimal navigation on the Application and better functioning of the various interfaces and applications, the Company may install a cookie on the User's computer. This cookie makes it possible to store information relating to browsing on the Application, as well as any data entered by Users (in particular searches, login, email, password).\n    The User expressly authorises the Company to deposit a file called a \"cookie\" on the User's hard disk.\n    The User has the possibility of blocking, modifying the storage period, or deleting this cookie via the interface of his browser. If the systematic deactivation of cookies on the User's browser prevents the User from using certain services or functionalities of the Application, this malfunction shall in no way constitute damage for the member, who may not claim any compensation for this fact."
+      },
+      "10": {
+        "title": "10. Changes",
+        "content": "The Company reserves the right to modify the Application, the services offered therein, the TOS as well as any delivery procedure or other component of the services provided by the Company through the Application."
+      },
+      "11": {
+        "title": "11. Liability",
+        "content": "The Company may under no circumstances be held liable for the unavailability, whether temporary or permanent, of the Application and, although it shall implement all means to ensure that the service is permanently available, it may be interrupted at any time. In addition, the Company reserves the right, by a voluntary act, to make the Application unavailable in order to carry out any update, improvement or maintenance operation.\n    As previously mentioned herein, the Company may under no circumstances be held liable for delays in the performance of a service for reasons that are beyond its control, beyond its control, unforeseeable and irresistible or for which it cannot be held responsible."
+      },
+      "12": {
+        "title": "12. Copyright protection",
+        "content": "The trademark, logo, and graphic charter of this Application are trademarks registered with the INPI and works protected under intellectual property law, the ownership of which belongs exclusively to the Company. Any dissemination, exploitation, representation, reproduction, whether partial or complete without the express authorization of the said company will expose the offender to civil and criminal prosecution."
+      }
+    }
+  },
+  "TOAST": {
+    "login": {
+      "invalid": "Invalid email or password.",
+      "connected": "You are now connected."
+    },
+    "register": {
+      "invalid": "Invalid email or password.",
+      "validate": "Your account has been created.",
+      "cgu": "You must accept the Terms of Use in order to continue."
+    },
+    "recover": {
+      "invalid": "An error occurred while sending the recovery email.",
+      "validate": "You've received an email which contains the recovery link.",
+      "mail": "Please type a valid email address."
+    }
+  }
+}

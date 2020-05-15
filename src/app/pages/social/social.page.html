@@ -1,21 +1,21 @@
 <ion-content class="content">
-    <ion-title class="title">Voyager vers?
+    <ion-title class="title">{{ 'SOCIAL.title' | translate }}
     </ion-title>
-    <ion-searchbar placeholder="Entrer la ville"></ion-searchbar>
-    <ion-title class="title">Destinations populaires</ion-title>
+    <ion-searchbar placeholder="{{ 'SOCIAL.search' | translate }}"></ion-searchbar>
+    <ion-title class="title">{{ 'SOCIAL.highlight' | translate }}</ion-title>
     <div class="scroll">
         <ion-card-content class="content_img" *ngFor="let image of images">
             <img class="img_popular" [src]="image.url" alt="image" />
         </ion-card-content>
     </div>
-    <ion-title class="title">Mes photos</ion-title>
+    <ion-title class="title">{{ 'SOCIAL.pictures.title' | translate }}</ion-title>
     <ion-card class="card_mybook" *ngFor="let imageUser of imagesUser">
         <ion-card-content class="content_mybook">
             <ion-card-content class="left">
                 <ion-avatar><img class="avatar" src="../../assets/pictures/image4.png" alt="avatar" /></ion-avatar>
-                <ion-text class="name">Nom</ion-text>
+                <ion-text class="name">{{ 'SOCIAL.pictures.name' | translate }}</ion-text>
             </ion-card-content>
-            <ion-text class="date">Date</ion-text>
+            <ion-text class="date">{{ 'SOCIAL.pictures.date' | translate }}</ion-text>
         </ion-card-content>
         <img class="img" [src]="imageUser.url" alt="image" />
     </ion-card>

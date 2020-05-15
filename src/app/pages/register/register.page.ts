@@ -4,6 +4,7 @@ import { ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { NavController } from '@ionic/angular';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-register',
@@ -29,7 +30,8 @@ dataUser = {
     private navCtrl: NavController,
     public afDB: AngularFireDatabase,
     public toastController: ToastController,
-    public afAuth: AngularFireAuth
+    public afAuth: AngularFireAuth,
+    private translate: TranslateService
   ) {
     this.afAuth.authState.subscribe(auth => {
       if (!auth) {
@@ -74,7 +76,7 @@ if (this.dataUser.cgu === true && this.dataUser.password === this.dataUser.confi
 }
 async loginError() {
     const toast = await this.toastController.create({
-      message: 'Adresse email ou mot de passe incorrect.',
+      message: this.translate.instant("TOAST.register.invalid"),
       position: 'top',
       duration: 2000
     });
@@ -83,7 +85,7 @@ async loginError() {
 
   async loginSuccess() {
     const toast = await this.toastController.create({
-      message: 'Vous êtes maintenant inscrit.',
+      message: this.translate.instant("TOAST.register.validate"),
       position: 'top',
       duration: 2000
     });
@@ -92,7 +94,7 @@ async loginError() {
 
   async CGUError() {
     const toast = await this.toastController.create({
-      message: 'Vous devez accepter les CGU pour pouvoir continuer.',
+      message: this.translate.instant("TOAST.register.cgu"),
       position: 'top',
       duration: 2000
     });
