@@ -9,7 +9,7 @@
         </ion-card-content>
     </div>
     <ion-title class="title">Mes photos</ion-title>
-    <ion-card class="card_mybook" *ngFor="let image of images">
+    <ion-card class="card_mybook" *ngFor="let imageUser of imagesUser">
         <ion-card-content class="content_mybook">
             <ion-card-content class="left">
                 <ion-avatar><img class="avatar" src="../../assets/pictures/image4.png" alt="avatar" /></ion-avatar>
@@ -17,7 +17,7 @@
             </ion-card-content>
             <ion-text class="date">Date</ion-text>
         </ion-card-content>
-        <img class="img" [src]="image.url" alt="image" />
+        <img class="img" [src]="imageUser.url" alt="image" />
     </ion-card>
     <ion-content class="footer"></ion-content>
 </ion-content>
