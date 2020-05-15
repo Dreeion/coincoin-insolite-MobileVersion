@@ -10,7 +10,6 @@ export class UserService {
   }
 
   getCurrentUserId() {
-    return firebase.auth().currentUser.uid
+    return firebase.auth().currentUser.uid;
   }
-
 }

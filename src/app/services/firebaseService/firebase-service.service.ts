@@ -1,10 +1,8 @@
 import {AngularFireDatabase} from '@angular/fire/database';
 import { AngularFireStorage } from '@angular/fire/storage';
 import {Injectable} from '@angular/core';
-import { resolve } from 'url';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
-import { AngularFireStorageModule } from '@angular/fire/storage';
 import { LoadingController, AlertController } from '@ionic/angular';
 
 @Injectable({
@@ -44,19 +42,17 @@ export class FirebaseService {
   }
 
   getImagesStorage(image: any, images: any, key) {
-    const imgRef = image.payload.exportVal().ref;
+    const imgRef = image.payload.exportVal().url;
     this.afSG.ref(imgRef).getDownloadURL().subscribe(imgUrl => {
       if (key == null) {
         images.push({
-          name: image.payload.exportVal().name,
           url: imgUrl
-        });
+        })
       } else {
         if (key == image.payload.key) {
           images.push({
-            name: image.payload.exportVal().name,
             url: imgUrl
-          });
+          })
         }
       }
     });
