@@ -7,6 +7,8 @@ import { FilePath } from '@ionic-native/file-path/ngx';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,8 +31,12 @@ export const firebaseConfig = {
 };
 
 import { Facebook } from '@ionic-native/facebook/ngx';
-import {FirebaseService} from "./services/firebaseService/firebase-service.service";
+import {FirebaseService} from './services/firebaseService/firebase-service.service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -43,10 +49,18 @@ import {FirebaseService} from "./services/firebaseService/firebase-service.servi
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: (createTranslateLoader),
+            deps: [HttpClient]
+        }
+    })
   ],
 
-  
+
   providers: [
     Camera,
     Facebook,

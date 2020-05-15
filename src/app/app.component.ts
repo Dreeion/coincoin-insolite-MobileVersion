@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 
+import { LanguageServiceService } from './services/languageService/language-service.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -19,7 +21,8 @@ export class AppComponent {
     public afAuth: AngularFireAuth,
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private languageService: LanguageServiceService
   ) {
     this.initializeApp();
   }
@@ -28,14 +31,16 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.afAuth.authState.subscribe(auth => {
       if (!auth) {
-        console.log('non connecté');
+        console.log('non connectï¿½');
         this.router.navigateByUrl('/pages/login');
       } else {
-        console.log('Connecté: ' + auth.uid);
+        console.log('Connectï¿½: ' + auth.uid);
       }
     });
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      this.languageService.setInitialAppLanguage();
     });
   }
 }

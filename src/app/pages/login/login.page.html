@@ -9,41 +9,41 @@
 
     <!--<div *ngIf="!connected">-->
     <ion-item >
-      <ion-label color="light">Email</ion-label>
-      <ion-input color="light" type="mail" placeholder="Adresse email" [(ngModel)]="dataUser.email"></ion-input>
+      <ion-label color="light">{{ 'LOGIN.mail.title' | translate }}</ion-label>
+      <ion-input color="light" type="mail" placeholder="{{ 'LOGIN.mail.placeholder' | translate }}" [(ngModel)]="dataUser.email"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label color="light">Mot de passe</ion-label>
-      <ion-input color="light" type="password" placeholder="Mot de passe" [(ngModel)]="dataUser.password"></ion-input>
+      <ion-label color="light">{{ 'LOGIN.password.title' | translate }}</ion-label>
+      <ion-input color="light" type="password" placeholder="{{ 'LOGIN.password.placeholder' | translate }}" [(ngModel)]="dataUser.password"></ion-input>
     </ion-item>
 
     <ion-item lines="none">
-      <ion-button color="light" slot="end" fill="clear" [routerLink]="['../../forgetpassword']">Mot de passe oublié ?</ion-button>
+      <ion-button color="light" slot="end" fill="clear" [routerLink]="['../../forgetpassword']">{{ 'LOGIN.forgetpwd' | translate }}</ion-button>
     </ion-item>
 
-    <ion-button color="light" expand="block" shape="round" fill="outline" (click)="login()">Connexion</ion-button>
+    <ion-button color="light" expand="block" shape="round" fill="outline" (click)="login()">{{ 'LOGIN.button.login' | translate }}</ion-button>
     <br>
-    <ion-button color="tertiary" expand="block" shape="round" [routerLink]="['../../register']" >Inscription</ion-button>
+    <ion-button color="tertiary" expand="block" shape="round" [routerLink]="['../../register']" >{{ 'LOGIN.button.register' | translate }}</ion-button>
 
     <ion-item lines="none">
-      <ion-label color="light" class="ion-text-center">Ou connectez-vous avec</ion-label>
+      <ion-label color="light" class="ion-text-center">{{ 'LOGIN.orconnect' | translate }}</ion-label>
     </ion-item>
     
     <div class="flex">
       <ion-button color="facebook" shape="round" (click)="facebookLogin()">
         <ion-icon slot="start" name="logo-facebook"></ion-icon>
-        Facebook
+        {{ 'LOGIN.facebook' | translate }}
       </ion-button>
       <ion-button color="google" shape="round">
         <ion-icon slot="start" name="logo-google"></ion-icon>
-        Google
+        {{ 'LOGIN.google' | translate }}
       </ion-button>
     </div>
     <div class="flex">
       <ion-button color="anonyme" shape="round" (click)="anonymeLogin()">
         <ion-icon slot="start" name="person"></ion-icon>
-        Anonyme
+        {{ 'LOGIN.anon' | translate }}
       </ion-button>
     </div>
   </div>
