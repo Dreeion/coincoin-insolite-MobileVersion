@@ -35,8 +35,18 @@ export class PhotoService {
           text : "Ouvrir l'appareil photo",
           handler : ()=>{ 
               this.takePicture(this.camera.PictureSourceType.CAMERA).then(val => {
-                console.log(val)
-                this.firebase.uploadImage(val)
+                this.firebase.afAuth.authState.subscribe(auth => {
+                  this.firebase.getImageUrl("Markers").then(name => {
+                    this.firebase.uploadImage(name,val)
+                    var data = { url: name }
+                    this.firebase.createKey('Images').then(key => {
+                      var UserImage = '/user-images/' + auth.uid + '/' + key 
+                      var Image = '/Images/' + key
+                      this.firebase.addData(UserImage, data)
+                      this.firebase.addData(Image,data)
+                    })
+                  })
+                })
               })
           }
         },
