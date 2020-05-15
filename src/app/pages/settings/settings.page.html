@@ -66,8 +66,8 @@
 
   <h2>{{ 'SETTINGS.lang.title' | translate }}</h2>
 <ion-list class="list-drapeau">
- <img class="drapeau" src="../../assets/icons/drapeau/francais.png" alt="image">
- <img class="drapeau" src="../../assets/icons/drapeau/anglais.png" alt="image">
+ <img  class="drapeau" (click)="select('fr')" src="../../assets/icons/drapeau/francais.png" alt="image">
+ <img class="drapeau" (click)="select('en')" src="../../assets/icons/drapeau/anglais.png" alt="image">
 </ion-list>
 <br/>
    <p id="suppr" > <ion-button (click)="deleteUser()" color="danger" >{{ 'SETTINGS.delete' | translate }}</ion-button> </p>

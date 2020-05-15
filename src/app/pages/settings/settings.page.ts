@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { ToastController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
+import { LanguageServiceService } from '../../services/languageService/language-service.service';
 
 @Component({
   selector: 'app-settings',
@@ -10,12 +11,15 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./settings.page.scss'],
 })
 export class SettingsPage implements OnInit {
+  languages = [];
+  selected = '';
 
   constructor(
     public afAuth: AngularFireAuth,
     public toastController: ToastController,
-    private navCtrl: NavController
-    ) {}
+    private navCtrl: NavController,
+    private languageService: LanguageServiceService
+  ) {}
 
   dataUser = {
         email: '',
@@ -27,7 +31,13 @@ export class SettingsPage implements OnInit {
       };
 
   ngOnInit() {
-      }
+      this.languages = this.languageService.getLanguages();
+      this.selected = this.languageService.selected;
+  }
+
+  select(lng) {
+      this.languageService.setLanguage(lng);
+  }
 
   deleteUser() {
     var user = firebase.auth().currentUser;
@@ -53,7 +63,7 @@ export class SettingsPage implements OnInit {
         // An error happened.
     });
  // }
- //   else{console.log('mdp différent');}
+ //   else{console.log('mdp diffï¿½rent');}
   }
 
 resetPseudo() {

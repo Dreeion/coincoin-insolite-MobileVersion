@@ -11,7 +11,7 @@ import { MapPage } from './map.page';
 import { TestComponentModule } from '../../components/footer/footer.component.module';
 
 import { DynamicMapComponent } from '../../components/dynamic-map/dynamic-map.component';
-import {TranslateModule} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
