@@ -70,7 +70,8 @@
  <img class="drapeau" (click)="select('en')" src="../../assets/icons/drapeau/anglais.png" alt="image">
 </ion-list>
 <br/>
-   <p id="suppr" > <ion-button (click)="deleteUser()" color="danger" >{{ 'SETTINGS.delete' | translate }}</ion-button> </p>
+   <p id="suppr"> <ion-button (click)="deleteUser()" color="danger" >{{ 'SETTINGS.delete' | translate }}</ion-button>
+   <ion-button (click)="logout()" color="danger" >{{ 'SETTINGS.logout' | translate }}</ion-button> </p>
    <p> <ion-tab-button color="medium" id="cgu" tab="cgu">{{ 'SETTINGS.cgu' | translate }}</ion-tab-button> </p>
    <br/><br/>
    </div>

@@ -49,6 +49,11 @@ export class SettingsPage implements OnInit {
     });
   }
 
+  logout() {
+      localStorage.clear();
+      this.navCtrl.navigateRoot('pages/login');
+  }
+
   resetPassword() {
     var user = firebase.auth().currentUser;
     var newPassword = this.dataUser.newPassword;
