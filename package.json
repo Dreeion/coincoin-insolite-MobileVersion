@@ -102,7 +102,8 @@
         "FACEBOOK_ANDROID_SDK_VERSION": "5.5.2"
       },
       "cordova-plugin-filepath": {},
-      "cordova-sqlite-storage": {}
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-geolocation": {}
     },
     "platforms": [
       "android"
