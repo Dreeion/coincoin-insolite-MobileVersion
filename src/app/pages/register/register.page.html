@@ -5,33 +5,33 @@
       </ion-buttons>
     <br><br><br><br>
     <ion-item >
-      <ion-label color="light">Pseudo*</ion-label>
-      <ion-input color="light" [(ngModel)]="dataUser.pseudo" type="text" placeholder="Pseudonyme" ></ion-input>
+      <ion-label color="light">{{ 'REGISTER.username.title' | translate }}</ion-label>
+      <ion-input color="light" [(ngModel)]="dataUser.pseudo" type="text" placeholder="{{ 'REGISTER.username.placeholder' | translate }}" ></ion-input>
     </ion-item>
 
     <ion-item >
-      <ion-label color="light">Email*</ion-label>
-      <ion-input color="light" type="mail" placeholder="Adresse email" [(ngModel)]="dataUser.email"></ion-input>
+      <ion-label color="light">{{ 'REGISTER.mail.title' | translate }}</ion-label>
+      <ion-input color="light" type="mail" placeholder="{{ 'REGISTER.mail.placeholder' | translate }}" [(ngModel)]="dataUser.email"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label color="light">Mot de passe*</ion-label>
-      <ion-input color="light" type="password" placeholder="Mot de passe" [(ngModel)]="dataUser.password"></ion-input>
+      <ion-label color="light">{{ 'REGISTER.password.title' | translate }}</ion-label>
+      <ion-input color="light" type="password" placeholder="{{ 'REGISTER.password.placeholder' | translate }}" [(ngModel)]="dataUser.password"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label color="light">Confirmer Mot de passe*</ion-label>
-      <ion-input color="light" type="password" placeholder="Mot de passe" [(ngModel)]="dataUser.confirmPassword"></ion-input>
+      <ion-label color="light">{{ 'REGISTER.cpassword.title' | translate }}</ion-label>
+      <ion-input color="light" type="password" placeholder="{{ 'REGISTER.cpassword.placeholder' | translate }}" [(ngModel)]="dataUser.confirmPassword"></ion-input>
     </ion-item>
 
     <ion-item>
       <div>
         <ion-checkbox  color="light" [(ngModel)]="dataUser.cgu"></ion-checkbox>
       </div>
-      <ion-tab-button  color="medium" tab="cgu">J'accepte les Conditions Générales d'Utilisation</ion-tab-button>
+      <ion-tab-button  color="medium" tab="cgu">{{ 'REGISTER.cgu' | translate }}</ion-tab-button>
     </ion-item>
     <br>
-    <ion-button color="tertiary" expand="block" shape="round" (click)="signUp()">Valider Inscription</ion-button>
+    <ion-button color="tertiary" expand="block" shape="round" (click)="signUp()">{{ 'REGISTER.validate' | translate }}</ion-button>
     <br><br>
   </div>
 </ion-content>

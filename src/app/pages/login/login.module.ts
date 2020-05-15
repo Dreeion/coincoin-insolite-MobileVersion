@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { LoginPage } from './login.page';
 import { TestComponentModule } from '../../components/footer/footer.component.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { TestComponentModule } from '../../components/footer/footer.component.mo
         component: LoginPage
       }
     ]),
-  TestComponentModule
+    TestComponentModule,
+    TranslateModule
   ],
   declarations: [LoginPage]
 })

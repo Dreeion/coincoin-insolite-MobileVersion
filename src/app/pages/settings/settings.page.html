@@ -1,38 +1,38 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Paramètre</ion-title>
+    <ion-title>{{ 'SETTINGS.title' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="content">
 <div class="padding">
- <h2>Notifications </h2>
+ <h2>{{ 'SETTINGS.notification.title' | translate }}</h2>
 
  <ion-list>
   <ion-item>
-    <ion-label> Proche d'un lieu souvent visité </ion-label>
+    <ion-label>{{ 'SETTINGS.notification.near' | translate }}</ion-label>
     <ion-toggle></ion-toggle>
   </ion-item>
 
   <ion-item>
-    <ion-label>Newsletters</ion-label>
+    <ion-label>{{ 'SETTINGS.notification.newsletter' | translate }}</ion-label>
     <ion-toggle></ion-toggle>
   </ion-item>
   
   </ion-list>
   
-  <h2>Changer de pseudonyme</h2>
-  <ion-input type="text" placeholder="Nouveau Pseudonyme" [(ngModel)]="dataUser.pseudo"></ion-input>
+  <h2>{{ 'SETTINGS.username.title' | translate }}</h2>
+  <ion-input type="text" placeholder="{{ 'SETTINGS.username.placeholder' | translate }}" [(ngModel)]="dataUser.pseudo"></ion-input>
   <br>
-  <ion-button color="success" expand="block" shape="round" fill="outline" (click)="resetPseudo()">Enregistrer nouveau pseudo</ion-button>
+  <ion-button color="success" expand="block" shape="round" fill="outline" (click)="resetPseudo()">{{ 'SETTINGS.username.validate' | translate }}</ion-button>
 
-    <h2>Changer de Mot de passe</h2>
+    <h2>{{ 'SETTINGS.password.title' | translate }}</h2>
   <!--<ion-input type="password"  placeholder="Mot de passe actuel" [(ngModel)]="dataUser.oldPassword"></ion-input>-->
   <br>
-  <ion-input type="password" placeholder="Nouveau Mot de passe" [(ngModel)]="dataUser.newPassword"></ion-input>
+  <ion-input type="password" placeholder="{{ 'SETTINGS.password.placeholder' | translate }}" [(ngModel)]="dataUser.newPassword"></ion-input>
   <br>
-  <ion-button color="success" expand="block" shape="round" fill="outline" (click)="resetPassword()">Enregistrer les modifications</ion-button>
-  <h2>Sélectionner un profil</h2>
+  <ion-button color="success" expand="block" shape="round" fill="outline" (click)="resetPassword()">{{ 'SETTINGS.password.validate' | translate }}</ion-button>
+  <h2>{{ 'SETTINGS.profile.title' | translate }}</h2>
   
  <ion-list class="list-avatar">
   <ion-avatar>
@@ -64,14 +64,14 @@
     </ion-list>
 
 
-  <h2>Sélectionner une langue</h2>
+  <h2>{{ 'SETTINGS.lang.title' | translate }}</h2>
 <ion-list class="list-drapeau">
  <img class="drapeau" src="../../assets/icons/drapeau/francais.png" alt="image">
  <img class="drapeau" src="../../assets/icons/drapeau/anglais.png" alt="image">
 </ion-list>
 <br/>
-   <p id="suppr" > <ion-button (click)="deleteUser()" color="danger" >Supprimer le compte</ion-button> </p>
-   <p> <ion-tab-button color="medium" id="cgu" tab="cgu">Conditions générale d'utilisation</ion-tab-button> </p>
+   <p id="suppr" > <ion-button (click)="deleteUser()" color="danger" >{{ 'SETTINGS.delete' | translate }}</ion-button> </p>
+   <p> <ion-tab-button color="medium" id="cgu" tab="cgu">{{ 'SETTINGS.cgu' | translate }}</ion-tab-button> </p>
    <br/><br/>
    </div>
 </ion-content>
