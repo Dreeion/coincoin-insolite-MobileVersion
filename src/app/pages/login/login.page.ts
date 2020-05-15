@@ -5,6 +5,7 @@ import * as firebase from 'firebase/app';
 import { Facebook } from '@ionic-native/facebook/ngx';
 import { Platform } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -29,16 +30,17 @@ export class LoginPage {
     public toastController: ToastController,
     public afAuth: AngularFireAuth,
     private fb: Facebook,
-    public platform: Platform
+    public platform: Platform,
+    private translate: TranslateService
   ) {
     this.providerFb = new firebase.auth.FacebookAuthProvider();
 
     this.afAuth.authState.subscribe(auth => {
       if (!auth) {
-        console.log('non connecté');
+        console.log('non connectï¿½');
         this.connected = false;
       } else {
-        console.log('connecté: ' + auth.uid);
+        console.log('connectï¿½: ' + auth.uid);
         this.connected = true;
         this.userId = auth.uid;
         this.mail = auth.email;
@@ -58,7 +60,7 @@ export class LoginPage {
   login() {
     this.afAuth.auth.signInWithEmailAndPassword(this.dataUser.email, this.dataUser.password)
     .then(() => {
-      console.log('Connexion réussie');
+      console.log('Connexion rï¿½ussie');
       this.loginSuccess();
       this.dataUser = {
         email: '',
@@ -73,16 +75,17 @@ export class LoginPage {
 
   async loginError() {
     const toast = await this.toastController.create({
-      message: 'Adresse email ou mot de passe incorrect.',
+      message: this.translate.instant('TOAST.login.invalid'),
+          //',
       position: 'top',
-      duration: 2000
+      duration: 2000,
     });
     toast.present();
   }
 
   async loginSuccess() {
     const toast = await this.toastController.create({
-      message: 'Vous Ã¨tes maintenant connectÃ©.',
+      message: this.translate.instant('TOAST.login.connected'),
       position: 'top',
       duration: 2000
     });

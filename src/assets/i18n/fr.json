@@ -138,5 +138,21 @@
         "content": "La marque, le logo, et la charte graphique da la présente Application sont des marques déposées auprès de l'INPI et des oeuvres protégées au titre de la propriété intellectuelle, dont la propriété revient exclusivement à la Société. Toute diffusion, exploitation, représentation, reproduction, qu’elle soit partielle ou intégrale sans l’autorisation expresse de ladite société exposera le contrevenant à des poursuites civiles et pénales."
       }
     }
+  },
+  "TOAST": {
+    "login": {
+      "invalid": "Adresse email ou mot de passe incorrect.",
+      "connected": "Vous êtes maintenant connecté."
+    },
+    "register": {
+      "invalid": "Adresse email ou mot de passe incorrect.",
+      "validate": "Votre compte a bien été créé.",
+      "cgu": "Vous devez accepter les CGU pour pouvoir continuer."
+    },
+    "recover": {
+      "invalid": "Une erreur s'est produite lors de l'envoi du mail de réinitialisation du mot de passe.",
+      "validate": "Un lien pour réinitialiser votre mot de passe à été envoyé dans votre boîte mail.",
+      "mail": "Veuillez insérer une adresse mail valide."
+    }
   }
 }

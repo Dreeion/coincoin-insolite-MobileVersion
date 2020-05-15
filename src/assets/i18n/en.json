@@ -138,5 +138,21 @@
         "content": "The trademark, logo, and graphic charter of this Application are trademarks registered with the INPI and works protected under intellectual property law, the ownership of which belongs exclusively to the Company. Any dissemination, exploitation, representation, reproduction, whether partial or complete without the express authorization of the said company will expose the offender to civil and criminal prosecution."
       }
     }
+  },
+  "TOAST": {
+    "login": {
+      "invalid": "Invalid email or password.",
+      "connected": "You are now connected."
+    },
+    "register": {
+      "invalid": "Invalid email or password.",
+      "validate": "Your account has been created.",
+      "cgu": "You must accept the Terms of Use in order to continue."
+    },
+    "recover": {
+      "invalid": "An error occurred while sending the recovery email.",
+      "validate": "You've received an email which contains the recovery link.",
+      "mail": "Please type a valid email address."
+    }
   }
 }
