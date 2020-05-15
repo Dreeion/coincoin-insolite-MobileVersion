@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {FirebaseService} from "../../services/firebaseService/firebase-service.service";
-import {Subscription} from "rxjs";
+import {UserService} from "../../services/userService/user-service.service";
 
 @Component({
   selector: 'app-social',
@@ -10,15 +10,22 @@ import {Subscription} from "rxjs";
 export class SocialPage {
 
   images = [];
+  imagesUser = [];
 
   constructor(
-      private firebase: FirebaseService
+      private firebase: FirebaseService,
+      private user: UserService
   ) {
     this.readImages();
+    this.getImagesUser();
   }
 
   readImages() {
-    return this.firebase.getImagesDatabase(this.images);
+    return this.firebase.getImagesDatabase(this.images, 'Images', null);
+  }
+
+  getImagesUser() {
+    return this.firebase.getImagesUserDatabase('user-images', this.user.getCurrentUserId(), this.imagesUser);
   }
 
 

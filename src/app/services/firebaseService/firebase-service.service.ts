@@ -21,10 +21,10 @@ export class FirebaseService {
   ) {
   }
 
-  getImagesDatabase(getImages) {
-    this.afDB.list('Images/').snapshotChanges(['child_added']).subscribe(images => {
+  getImagesDatabase(getImages, folder, key) {
+    this.afDB.list(folder + '/').snapshotChanges(['child_added']).subscribe(images => {
       images.forEach(image => {
-        this.getImagesStorage(image, getImages);
+        this.getImagesStorage(image, getImages, key);
       });
     });
   }
@@ -43,13 +43,22 @@ export class FirebaseService {
     });
   }
 
-  getImagesStorage(image: any, images: any) {
+  getImagesStorage(image: any, images: any, key) {
     const imgRef = image.payload.exportVal().ref;
     this.afSG.ref(imgRef).getDownloadURL().subscribe(imgUrl => {
-      images.push({
-        name: image.payload.exportVal().name,
-        url: imgUrl
-      });
+      if (key == null) {
+        images.push({
+          name: image.payload.exportVal().name,
+          url: imgUrl
+        });
+      } else {
+        if (key == image.payload.key) {
+          images.push({
+            name: image.payload.exportVal().name,
+            url: imgUrl
+          });
+        }
+      }
     });
   }
 
@@ -67,6 +76,15 @@ export class FirebaseService {
       const upload = this.afSG.ref(imagePath).putString(image, 'data_url'); // upload de l'image dans storage
       return firebase.database().ref().update(updates);
     });
+  }
+
+  getImagesUserDatabase(folder, uid, images) {
+    firebase.database().ref(folder + '/' + uid).once('value')
+        .then((snapshot) => {
+          var image = Object.keys(snapshot.val());
+          var key = '-' + Object.values(image)[0];
+          this.getImagesDatabase(images, 'Images', key);
+        });
   }
 
 }
