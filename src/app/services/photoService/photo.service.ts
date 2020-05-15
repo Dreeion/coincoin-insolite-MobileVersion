@@ -59,7 +59,8 @@ export class PhotoService {
       quality: 100,
       sourceType: sourceType,
       saveToPhotoAlbum: false,
-      correctOrientation: true
+      correctOrientation: true,
+      destinationType: this.camera.DestinationType.DATA_URL
     }
     this.camera.getPicture(options).then(imagePath => {
       if (this.plt.is('android') && sourceType === this.camera.PictureSourceType.PHOTOLIBRARY) {
@@ -67,7 +68,7 @@ export class PhotoService {
               .then(filePath => {
                   let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
                   let currentName = imagePath.substring(imagePath.lastIndexOf('/') + 1, imagePath.lastIndexOf('?'));
-                  resolve(correctPath)
+                  resolve(filePath)
                   //this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
               });
       } else {
