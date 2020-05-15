@@ -9,7 +9,6 @@ import { LoadingController, AlertController } from '@ionic/angular';
   providedIn: 'root'
 })
 export class FirebaseService {
-
   constructor(
       public afAuth: AngularFireAuth,
       public afDB: AngularFireDatabase,
@@ -58,21 +57,35 @@ export class FirebaseService {
     });
   }
 
-  async uploadImage( image: string) {
-    const imagePath = new Date().getTime() + '.jpg'; // nom de l'image dans storage
-    this.afAuth.authState.subscribe(auth => {
-      const newPostKey = firebase.database().ref().child('Users').push().key; // création de la clé dans la database
-      const updates = {};
-      const postData = {
-        url: imagePath
-      }
-
-      /*updates['/user-images/' + auth.uid + '/' + newPostKey ] = postData;
-      updates['/Images/' + newPostKey ] = postData;*/
-      const upload = this.afSG.ref(imagePath).putString(image, 'data_url'); // upload de l'image dans storage
-      return firebase.database().ref().update(updates);
-    });
+  getImageUrl(folder : string = "" ) : Promise<string>{
+    return new Promise((resolve) => {
+      const imagePath = new Date().getTime() + '.jpg'; // nom de l'image dans storage
+      resolve(folder + "/" + imagePath)
+    })
   }
+
+  createKey(docName){
+    return new Promise((resolve) => {
+      const newPostKey = firebase.database().ref().child(docName).push().key; // création de la clé dans la database
+      resolve(newPostKey)
+    })
+  }
+
+  addData(path : string, data : any){
+    this.afAuth.authState.subscribe(auth => {
+      const updates = {};
+      updates[path] = data;
+      return firebase.database().ref().update(updates);
+    }); 
+  }
+
+  uploadImage(url : string, image: string ) {
+        console.log(url)
+        console.log(image)
+        const upload = this.afSG.ref(url).putString("data:image/jpeg;base64,"+ image, 'data_url', {contentType:'image/jpg'}); // upload de l'image dans storage
+        return upload
+  }
+
 
   getImagesUserDatabase(folder, uid, images) {
     firebase.database().ref(folder + '/' + uid).once('value')
