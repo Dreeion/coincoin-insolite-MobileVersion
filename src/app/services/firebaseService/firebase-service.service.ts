@@ -91,8 +91,10 @@ export class FirebaseService {
     firebase.database().ref(folder + '/' + uid).once('value')
         .then((snapshot) => {
           var image = Object.keys(snapshot.val());
-          var key = '-' + Object.values(image)[0];
-          this.getImagesDatabase(images, 'Images', key);
+          for (var i = 0; i < image.length; i++) {
+            var key = Object.values(image)[i];
+            this.getImagesDatabase(images, 'Images', key);
+          }
         });
   }
 

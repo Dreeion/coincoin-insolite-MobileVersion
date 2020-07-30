@@ -75,12 +75,14 @@ export class LeafletService {
 
   getMarkersFromFirebase() {
     this.firebaseService.getDataFromFirebase("Markers").then(val => {
-      val.forEach( (element, index, array) => {
-        this.generateMarker(element.lat, element.long, element.image)
-        if(index == array.length-1){
-          this.map.addLayer(this.g_marker)
-        }
-      });
+        val.forEach( (element, index, array) => {
+            this.firebaseService.afSG.ref(element.image).getDownloadURL().subscribe(imgUrl => {
+                this.generateMarker(element.lat, element.long, imgUrl)
+            });
+            if(index == array.length-1){
+                this.map.addLayer(this.g_marker)
+            }
+        });
     });
   }
 
