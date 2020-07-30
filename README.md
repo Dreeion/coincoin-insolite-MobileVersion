@@ -30,3 +30,30 @@ Il est également demandé de designer et de développer un site web permettant 
 
 - [Mobile development](https://github.com/Dreeion/coincoin-insolite-mobile)
 - [Web development](https://github.com/Dreeion/coincoin-insolite-web)
+
+---
+
+**Setup the project**
+
+In order to run the project, you will need to run a few commands.
+
+First, create and setup the `android` and `www` folders by using the following commands:
+```sh
+ionic cordova platform add android
+mkdir www
+```
+
+Then, prepare the build by typing this command:
+```sh 
+ionic cordova prepare android
+```
+
+Once this is done, simply run the following command to build your APK:
+```sh 
+ionic cordova build android
+```
+
+Finally, run this command to run the app:
+```sh 
+ionic cordova run android -l -s -c
+```
