@@ -13,7 +13,7 @@
       "register": "Inscription"
     },
     "forgetpwd": "Mot de passe oublié ?",
-    "orconnect": "Ou connectez-vous avez",
+    "orconnect": "Ou connectez-vous avec",
     "facebook": "Facebook",
     "google": "Google",
     "anon": "Anonyme"
@@ -76,8 +76,6 @@
     "cgu": "Conditions Générales d'Utilisation"
   },
   "SOCIAL": {
-    "title": "Voyager vers...",
-    "search": "Entrez une ville",
     "highlight": "Lieux fréquemment visités",
     "pictures": {
       "title": "Mes photos",
