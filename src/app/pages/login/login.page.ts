@@ -37,10 +37,8 @@ export class LoginPage {
 
     this.afAuth.authState.subscribe(auth => {
       if (!auth) {
-        console.log('non connect�');
         this.connected = false;
       } else {
-        console.log('connect�: ' + auth.uid);
         this.connected = true;
         this.userId = auth.uid;
         this.mail = auth.email;
