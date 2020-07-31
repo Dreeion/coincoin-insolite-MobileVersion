@@ -48,16 +48,17 @@ export class LeafletService {
     this.getMarkersFromFirebase();
   }
 
-  generateMarker(lat,long,image="",text=""){
-    var mark = L.marker([lat, long],{icon: this.generateIconMarker(image)})
-    //.bindPopup('Ionic 4 <br> Leaflet.')
-    //mark.openPopup();
-    console.log(mark)
-    //mark.valueOf()._icon.style.borderRadius = "25px"
-    //mark.valueOf()._icon.style.border = "2px solid #2980B9"
-    //mark.valueOf()._icon.style.objectFit = "cover"
-    this.g_marker.addLayer(mark)
-  }
+generateMarker(lat, long, image="", text="") {
+    this.g_marker.addLayer(L.marker([lat, long], {icon: this.generateIconMarker(image)}).bindPopup('<img style="height: 300px;" src="' + image + '" alt="marker"/>', {
+      minWidth: 200,
+      maxWidth: 600
+    }));
+    // .bindPopup('Ionic 4 <br> Leaflet.')
+    // mark.openPopup();
+    // mark.valueOf()._icon.style.borderRadius = "25px"
+    // mark.valueOf()._icon.style.border = "2px solid #2980B9"
+    // mark.valueOf()._icon.style.objectFit = "cover"
+}
 
   generateIconMarker(url){
     var markerIcon = new L.icon({
