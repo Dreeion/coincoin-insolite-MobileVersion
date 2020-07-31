@@ -31,7 +31,6 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.afAuth.authState.subscribe(auth => {
       if (!auth) {
-        console.log('non connect�');
         this.router.navigateByUrl('/pages/login');
       } else {
         console.log('Connect�: ' + auth.uid);
