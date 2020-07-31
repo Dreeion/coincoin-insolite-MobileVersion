@@ -72,7 +72,7 @@ if (this.dataUser.cgu === true && this.dataUser.password === this.dataUser.confi
         console.log('Erreur: ' + err);
       });
     }
-  } else {this.CGUError(); }
+  } else {this.loginError(); }
 }
 async loginError() {
     const toast = await this.toastController.create({
