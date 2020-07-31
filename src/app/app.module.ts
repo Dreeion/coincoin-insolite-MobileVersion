@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -68,6 +69,7 @@ export function createTranslateLoader(http: HttpClient) {
     SplashScreen,
     FirebaseService,
     FilePath,
+    Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

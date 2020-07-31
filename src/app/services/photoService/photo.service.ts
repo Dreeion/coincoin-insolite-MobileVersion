@@ -3,6 +3,7 @@ import { Camera, CameraOptions, PictureSourceType} from '@ionic-native/camera/ng
 import { ActionSheetController, ToastController, Platform } from '@ionic/angular';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { FirebaseService } from '../firebaseService/firebase-service.service';
+import { GeolocService } from '../geolocService/geoloc-service.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +14,8 @@ export class PhotoService {
     private camera: Camera,
     private plt: Platform,
     private filePath: FilePath,
-    private firebase : FirebaseService
+    private firebase : FirebaseService,
+    private geolocService : GeolocService
   ) { }
 
 
@@ -39,12 +41,29 @@ export class PhotoService {
                   this.firebase.getImageUrl("Markers").then(name => {
                     this.firebase.uploadImage(name,val)
                     var data = { url: name }
+                    
                     this.firebase.createKey('Images').then(key => {
                       var UserImage = '/user-images/' + auth.uid + '/' + key 
                       var Image = '/Images/' + key
                       this.firebase.addData(UserImage, data)
                       this.firebase.addData(Image,data)
                     })
+
+                    this.geolocService.currentPosition().then(position => {
+                      console.log("ok2")
+                      this.firebase.createKey("Markers").then(mark => {
+                        console.log("ok3")
+                        this.firebase.addData(
+                          '/Markers/'+mark,
+                          {
+                            image : name,
+                            lat : position.lat,
+                            long : position.long
+                          }
+                        )
+                      })
+                    })
+
                   })
                 })
               })
@@ -66,7 +85,9 @@ export class PhotoService {
   takePicture(sourceType: PictureSourceType) : any{
     return new Promise ((resolve) => {
     var options: CameraOptions = {
-      quality: 100,
+      quality: 60,
+      targetWidth: 600,
+      targetHeight: 600,
       sourceType: sourceType,
       saveToPhotoAlbum: false,
       correctOrientation: true,
