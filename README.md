@@ -6,8 +6,8 @@ Related repo: https://github.com/Dreeion/coincoin-insolite-web
 
 The "CoinCoins Insolites" application is a student project aiming to use and develop our skills in a two-weeks-long project.
 
-It aims to develop an application allowing to its users to see and visit unusual places around them.
-It is also required to design and develop a website to highlighting the mobile application.
+The objective is to develop an application that allows users to see and visit unusual places around them. 
+It is also required to design and develop a website to showcase the application.
 
 ------
 
