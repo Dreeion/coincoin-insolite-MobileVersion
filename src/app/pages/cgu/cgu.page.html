@@ -1,96 +1,45 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>CGU</ion-title>
+    
+    
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="settings"></ion-back-button>
+      <p class="tab_back">
+        <ion-icon name="arrow-back" (click)="myBackButton()"></ion-icon>
+      </p>
     </ion-buttons>
+    <ion-title>{{ 'CGU.title' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="content">
-# Conditions Générales d�Utilisation
+<ion-content>
 
-###1. A propos de nous
-La Société COINCOIN INSOLITE, SAS, au capital de 50 000 euros, dont le siège social est � ORVAULT (44114) 213 Route de Rennes, immatriculée au registre du commerce et des sociétés de ORVAULT sous le numéro 123 456 789 représentée par Monsieur Ma�l DEBON (ci-après la " Société �).
+  <div id="cgu">
+    <span class="cgu-title">{{ 'CGU.cgu.title' | translate }}<br></span>
+    <br>
+    <span class="cgu-title">{{ 'CGU.cgu.1.title' | translate }}<br></span>
+    {{ 'CGU.cgu.1.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.2.title' | translate }}<br></span>
+    {{ 'CGU.cgu.2.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.3.title' | translate }}<br></span>
+    {{ 'CGU.cgu.3.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.4.title' | translate }}<br></span>
+    {{ 'CGU.cgu.4.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.5.title' | translate }}<br></span>
+    {{ 'CGU.cgu.5.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.6.title' | translate }}<br></span>
+    {{ 'CGU.cgu.6.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.7.title' | translate }}<br></span>
+    {{ 'CGU.cgu.7.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.8.title' | translate }}<br></span>
+    {{ 'CGU.cgu.8.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.9.title' | translate }}<br></span>
+    {{ 'CGU.cgu.9.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.10.title' | translate }}<br></span>
+    {{ 'CGU.cgu.10.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.11.title' | translate }}<br></span>
+    {{ 'CGU.cgu.11.content' | translate }}
+    <span class="cgu-title"><br>{{ 'CGU.cgu.12.title' | translate }}<br></span>
+    {{ 'CGU.cgu.12.content' | translate }}
+  </div>
 
-La Société propose les services suivants : Fournir une application mobile permettant aux randonneurs de localiser et visiter facilement des lieux insolites autour d'eux.
-
-###2. Préambule
-La Société invite ses Utilisateurs � lire attentivement les présentes Conditions Générales d�Utilisation (ci-après les " CGU "). Les CGU s'appliquent � tous les Services fournis par la Société � ses Utilisateurs d'une m�me catégorie, quelles que soient les clauses pouvant �tre inscrites sur les documents de l'Utilisateur.
-
-Les CGU sont systématiquement communiquées � l'Utilisateur qui en fait la demande.
-
-### 3. Définitions
-" Conditions Générales d'Utilisation " ou " CGU " désigne les présentes conditions générales d'utilisation en ligne ;
-
-" Services " désigne toutes les prestations de service proposées aux Utilisateurs par la Société � travers la présente Application ;
-
-" Application " désigne la présente Application, c�est-�-dire coincoininsolite.fr;
-
-" Société " désigne la Société CoinCoin Insolite, plus amplement désignée � l'article I des présentes ; et
-
-" Utilisateur " désigne toute personne qui fait utilisation de l'Application.
-
-###4. Inscription
-L�inscription � l'Application est ouverte � toutes les personnes morales ou physiques.
-
-L�utilisation des Services proposés sur l'Application est conditionnée � l�inscription de l�Utilisateur sur l'Application. L�inscription est gratuite.
-Pour procéder � l�inscription, l�Utilisateur doit remplir tous les champs obligatoires, sans lesquels le service ne peut �tre délivré. A défaut l�inscription ne pourra �tre complétée.
-
-Les Utilisateurs garantissent et déclarent sur l'honneur que toutes les informations communiquées sur l'Application, notamment lors de leur inscription, sont exactes et conformes � la réalité. Ils s�engagent � mettre � jour leurs informations personnelles � partir de la page dédiée � ces dernières et disponible dans leur compte.
-
-Tout Utilisateur enregistré dispose d�un identifiant et d�un mot de passe. Ces derniers sont strictement personnels et confidentiels et ne devront en aucun cas faire l�objet d�une communication � des tiers sous peine de suppression du compte de l�Utilisateur enregistré contrevenant. Chaque Utilisateur inscrit est personnellement responsable du maintien de la confidentialité de son identifiant et de son mot de passe. La Société ne sera en aucun cas tenue pour responsable de l�usurpation d�identité d�un Utilisateur. Si un Utilisateur suspecte une fraude � n�importe quel moment, il devra contacter la Société dans les plus brefs délais afin que cette dernière puisse prendre les mesures nécessaires et régulariser la situation.
-
-Chaque Utilisateur, qu�il soit une personne morale ou physique, ne peut �tre titulaire que d�un compte sur l'Application.
-En cas de non-respect des CGU, notamment la création de plusieurs comptes pour une seule personne ou encore la fourniture de fausses informations, la Société se réserve le droit de procéder � la suppression temporaire ou définitive de tous les comptes crées par l�Utilisateur enregistré contrevenant.
-La suppression du compte entra�ne la perte définitive de tous les avantages et services acquis sur l'Application. 
-
-En cas de suppression d�un compte par la Société pour manquement aux devoirs et obligations énoncées dans les CGU, il est formellement interdit � l�Utilisateur contrevenant de se réinscrire sur l'Application directement, par le biais d�une autre adresse électronique ou par personne interposée sans l�autorisation expresse de la Société.
-
-###5. Prestation de service
-Les Services faisant l�objet des CGU sont ceux qui figurent sur l'Application et qui sont proposés directement par la Société ou ses prestataires partenaires.
-
-Les services sont décrits sur la page correspondante au sein de l'Application et mention est faite de toutes leurs caractéristiques essentielles. La Société ne peut �tre tenue responsable de l�impossibilité de réaliser ladite prestation lorsque l�Utilisateur n�est pas éligible.
-
-###6. Traitement des données personnelles
-L'enregistrement sur l'Application entra�ne le traitement des données � caractère personnel de l'Utilisateur. Si l'Utilisateur refuse le traitement de ses données, il lui est demandé de s'abstenir d�utiliser l'Application.
-Ce traitement des données � caractère personnel se fait dans le respect du Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016.
-
-Par ailleurs, conformément � la loi Informatique et Libertés du 6 janvier 1978, l'Utilisateur dispose, � tout moment, d'un droit d'interrogation, d'accès, de rectification, de modification et d'opposition � l'ensemble de ses données personnelles en écrivant, par courrier et en justifiant de son identité, � l'adresse suivante : support@coincoininsolite.fr.
-
-Ces données personnelles sont nécessaires � l'amélioration des fonctionnalités de l'Application.
-
-###7. Partage des données collectées
-L'Application peut avoir recours � des sociétés tierces pour effectuer certaines opérations. En naviguant sur l'Application, l'Utilisateur accepte que des sociétés tierces puissent avoir accès � ses données pour permettre le bon fonctionnement de l'Application.
-Ces sociétés tierces n'ont accès aux données collectées que dans la cadre de la réalisation d'une t�che précise.
-L'Application reste responsable du traitement de ces données.
-Par ailleurs, l'Utilisateur peut donc �tre amené � recevoir des informations ou des offres commerciales de la part de la Société ou de ses partenaires.
-
-L'Utilisateur peut � tout moment s'opposer � la réception de ces offres commerciales, en écrivant � l'adresse de la Société indiquée ci-dessus, ou en cliquant sur le lien prévu � cet effet au sein des courriers électroniques re�us.
-Par ailleurs, les informations des Utilisateurs pourront �tre transmises � des tiers sans leur accord express préalable afin d'atteindre les buts suivants :
-respecter la loi
-protéger toute personne contre des dommages corporels graves, voire la mort
-lutter contre la fraude ou les atteintes portées � la Société ou � ses utilisateurs
-protéger les droits de propriété de la Société.
-
-###8. Protection des données
-La Société assure un niveau de sécurité approprié et proportionnel aux risques encourus ainsi qu'� leur probabilité, conformément au Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016 .
-
-Toutefois, ces mesures ne constituent en aucun cas une garantie et n'engagent pas la Société � une obligation de résultat concernant la sécurité des données.
-
-###9. Cookies
-Pour permettre � ses Utilisateurs de bénéficier d�une navigation optimale sur l'Application et d�un meilleur fonctionnement des différentes interfaces et applications, la Société est susceptible d�implanter un cookie sur l�ordinateur de l�Utilisateur. Ce cookie permet de stocker des informations relatives � la navigation sur l'Application, ainsi qu�aux éventuelles données saisies par les Utilisateurs (notamment recherches, login, email, mot de passe).
-L�Utilisateur autorise expressément la Société � déposer sur le disque dur de l�utilisateur un fichier dit� cookie �.
-L�Utilisateur dispose de la possibilité de bloquer, modifier la durée de conservation, ou supprimer ce cookie via l�interface de son navigateur. Si la désactivation systématique des cookies sur le navigateur de l�Utilisateur l�emp�che d�utiliser certains services ou fonctionnalités de l'Application, ce dysfonctionnement ne saurait en aucun cas constituer un dommage pour le membre qui ne pourra prétendre � aucune indemnité de ce fait.
-
-###10. Modifications
-La Société se réserve le droit de modifier l'Application, les services qui y sont proposés, les CGU ainsi que toute procédure de livraison ou autre élément constitutif des prestations réalisées par la Société par le biais de l'Application.
-
-###11. Responsabilité
-La Société ne peut en aucun cas �tre tenue responsable pour l�indisponibilité, qu�elle soit temporaire ou permanente de l'Application et, bien qu�elle mette en �uvre tous les moyens afin d�assurer en permanence le service, il se peut que celle-ci soit interrompue � tout moment. En outre, la Société se réserve le droit, par un acte volontaire, de rendre l'Application indisponible afin de réaliser toute opération de mise � jour, d�amélioration ou de maintenance.
-
-Tel que mentionné auparavant dans les présentes, la Société ne peut en aucun cas �tre tenue responsable des retards de réalisation d�une prestation de service pour des motifs qui échappent � son contr�le, indépendants de sa volonté, imprévisibles et irrésistibles ou dont la faute ne peut lui �tre imputable.
-
-###12. Propriété intellectuelle
-La marque, le logo, et la charte graphique da la présente Application sont des marques déposées auprès de l'INPI et des oeuvres protégées au titre de la propriété intellectuelle, dont la propriété revient exclusivement � la Société. Toute diffusion, exploitation, représentation, reproduction, qu�elle soit partielle ou intégrale sans l�autorisation expresse de ladite société exposera le contrevenant � des poursuites civiles et pénales.
 </ion-content>

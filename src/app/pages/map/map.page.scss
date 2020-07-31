@@ -18,3 +18,19 @@ ion-button{
     position: relative;
     border-radius: 25px;
 }
+
+.leafMarker{
+    border-radius: 25px;
+    //object-fit: cover;
+    //border: 2px solid black;
+}
+
+.duck{
+    transform: translate(-45%, -90%);
+    width: 80px;
+}
+
+.mycluster {
+    background: none!important;
+    border: 0px solid #666!important;
+}

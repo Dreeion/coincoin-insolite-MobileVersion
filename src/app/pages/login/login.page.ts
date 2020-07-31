@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Facebook } from '@ionic-native/facebook/ngx';
 import { Platform } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -27,24 +27,22 @@ export class LoginPage {
 
   constructor(
     private navCtrl: NavController,
-    public afDB: AngularFireDatabase,
     public toastController: ToastController,
     public afAuth: AngularFireAuth,
     private fb: Facebook,
-    public platform: Platform
+    public platform: Platform,
+    private translate: TranslateService
   ) {
     this.providerFb = new firebase.auth.FacebookAuthProvider();
 
     this.afAuth.authState.subscribe(auth => {
       if (!auth) {
-        console.log('non connecté');
         this.connected = false;
       } else {
-        console.log('connecté: ' + auth.uid);
         this.connected = true;
         this.userId = auth.uid;
         this.mail = auth.email;
-        this.method = auth.providerData[0].providerId;
+        /*this.method = auth.providerData[0].providerId;*/
       }
     });
   }
@@ -60,7 +58,7 @@ export class LoginPage {
   login() {
     this.afAuth.auth.signInWithEmailAndPassword(this.dataUser.email, this.dataUser.password)
     .then(() => {
-      console.log('Connexion réussie');
+      console.log('Connexion rï¿½ussie');
       this.loginSuccess();
       this.dataUser = {
         email: '',
@@ -75,16 +73,17 @@ export class LoginPage {
 
   async loginError() {
     const toast = await this.toastController.create({
-      message: 'Adresse email ou mot de passe incorrect.',
+      message: this.translate.instant('TOAST.login.invalid'),
+          //',
       position: 'top',
-      duration: 2000
+      duration: 2000,
     });
     toast.present();
   }
 
   async loginSuccess() {
     const toast = await this.toastController.create({
-      message: 'Vous êtes maintenant connecté.',
+      message: this.translate.instant('TOAST.login.connected'),
       position: 'top',
       duration: 2000
     });

@@ -1,0 +1,36 @@
+#title {
+	text-align: center;
+}
+
+ion-toolbar {
+    text-align: center;
+    border-bottom: none;
+}
+
+ion-back-button {
+    --color: #000000;
+}
+
+.header-md:after
+{
+  background-image: none;
+}
+
+#cgu {
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 8vh;
+    padding: 0px 10px;
+    margin-bottom: 2vh;
+}
+
+.cgu-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+ion-icon{
+    font-size: 24px;
+    padding-left: 10px;
+}

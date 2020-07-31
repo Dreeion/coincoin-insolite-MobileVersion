@@ -8,7 +8,8 @@ import { SettingsPageRoutingModule } from './settings-routing.module';
 
 import { SettingsPage } from './settings.page';
 
-import { TestComponentModule } from '../footer/footer.component.module';
+import { TestComponentModule } from '../../components/footer/footer.component.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { TestComponentModule } from '../footer/footer.component.module';
     FormsModule,
     IonicModule,
     SettingsPageRoutingModule,
-    TestComponentModule
+    TestComponentModule,
+    TranslateModule
   ],
   declarations: [SettingsPage]
 })

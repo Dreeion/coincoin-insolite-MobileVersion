@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +18,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { IonicStorageModule } from '@ionic/storage';
 
 export const firebaseConfig = {
     apiKey: 'AIzaSyCJaKO8d4pkleshE5R2AWPi53eZ0DPGt3M',
@@ -27,7 +32,12 @@ export const firebaseConfig = {
 };
 
 import { Facebook } from '@ionic-native/facebook/ngx';
+import {FirebaseService} from './services/firebaseService/firebase-service.service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,15 +49,27 @@ import { Facebook } from '@ionic-native/facebook/ngx';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    IonicStorageModule.forRoot(),
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: (createTranslateLoader),
+            deps: [HttpClient]
+        }
+    })
   ],
 
-  
+
   providers: [
     Camera,
     Facebook,
     StatusBar,
     SplashScreen,
+    FirebaseService,
+    FilePath,
+    Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

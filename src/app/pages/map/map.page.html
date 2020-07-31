@@ -1,11 +1,9 @@
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
 
-<script>
 
-</script>
 <ion-header>
   <ion-toolbar>
-    <ion-searchbar placeholder="Entrer une ville"></ion-searchbar>
+    <ion-searchbar placeholder="{{ 'MAP.search' | translate }}"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -15,7 +13,7 @@
 
   </div> 
 
-  <ion-button  (click)="openCam()"  color="secondary" expand="block" style="z-index: 8000;position: absolute;right: 25px;bottom:75px;border-radius: 100px;">
+  <ion-button  (click)="takePicture()"  color="secondary" expand="block" style="z-index: 8000;position: absolute;right: 25px;bottom:75px;border-radius: 100px;">
     <ion-icon name="camera" slot="start" class="cam_button"></ion-icon>
   </ion-button>
 
@@ -23,5 +21,4 @@
 
 
 <app-footer></app-footer>
-<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-    
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>

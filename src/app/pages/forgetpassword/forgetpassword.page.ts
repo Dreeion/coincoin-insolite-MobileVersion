@@ -3,6 +3,7 @@ import { AngularFireAuth } from "@angular/fire/auth";
 import * as firebase from "firebase";
 import { ToastController } from '@ionic/angular';
 import {  MenuController } from '@ionic/angular';
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -20,8 +21,8 @@ export class ForgetpasswordPage implements OnInit {
     constructor(
         private afAuth: AngularFireAuth,
         public toastController: ToastController,
-        public menuCtrl: MenuController
-
+        public menuCtrl: MenuController,
+        private translate: TranslateService
     ) { }
 
   ngOnInit() {
@@ -33,7 +34,7 @@ export class ForgetpasswordPage implements OnInit {
 
   async resetPwdError() {
     const toast = await this.toastController.create({
-      message: 'Une erreur s\'est produite lors de l\'envoie du mail de réinitialisation du mot de passe.',
+      message: this.translate.instant('TOAST.recover.invalid'),
       position: 'top',
       duration: 2000
     });
@@ -42,7 +43,7 @@ export class ForgetpasswordPage implements OnInit {
 
   async resetPwdSuccess() {
     const toast = await this.toastController.create({
-      message: 'Un lien pour réinitialiser votre mot de passe à été envoyé dans votre boîte mail.',
+      message: this.translate.instant('TOAST.recover.validate'),
       position: 'top',
       duration: 2000
     });
@@ -51,7 +52,7 @@ export class ForgetpasswordPage implements OnInit {
 
   async resetPwdNoEmail() {
     const toast = await this.toastController.create({
-      message: 'Veuillez insérer une adresse mail s\'il vous plaît.',
+      message: this.translate.instant('TOAST.recover.mail'),
       position: 'top',
       duration: 2000
     });

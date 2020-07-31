@@ -7,73 +7,42 @@
        <img src="../../assets/logo_coincoins.png"> 
     </div>
 
-    <div *ngIf="!connected">
+    <!--<div *ngIf="!connected">-->
     <ion-item >
-      <ion-label color="light">Email</ion-label>
-      <ion-input color="light" type="mail" placeholder="Adresse email" [(ngModel)]="dataUser.email"></ion-input>
+      <ion-label color="light">{{ 'LOGIN.mail.title' | translate }}</ion-label>
+      <ion-input color="light" type="mail" placeholder="{{ 'LOGIN.mail.placeholder' | translate }}" [(ngModel)]="dataUser.email"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label color="light">Mot de passe</ion-label>
-      <ion-input color="light" type="password" placeholder="Mot de passe" [(ngModel)]="dataUser.password"></ion-input>
+      <ion-label color="light">{{ 'LOGIN.password.title' | translate }}</ion-label>
+      <ion-input color="light" type="password" placeholder="{{ 'LOGIN.password.placeholder' | translate }}" [(ngModel)]="dataUser.password"></ion-input>
     </ion-item>
 
     <ion-item lines="none">
-      <ion-button color="light" slot="end" fill="clear" href="forgetpassword">Mot de passe oubli√© ?</ion-button>
+      <ion-button color="light" slot="end" fill="clear" [routerLink]="['../../forgetpassword']">{{ 'LOGIN.forgetpwd' | translate }}</ion-button>
     </ion-item>
 
-    <ion-button color="light" expand="block" shape="round" fill="outline" (click)="login()">Connexion</ion-button>
+    <ion-button color="light" expand="block" shape="round" fill="outline" (click)="login()">{{ 'LOGIN.button.login' | translate }}</ion-button>
     <br>
-    <ion-button color="tertiary" expand="block" shape="round" href="register" >Inscription</ion-button>
+    <ion-button color="tertiary" expand="block" shape="round" [routerLink]="['../../register']" >{{ 'LOGIN.button.register' | translate }}</ion-button>
 
     <ion-item lines="none">
-      <ion-label color="light" class="ion-text-center">Ou connectez-vous avec</ion-label>
+      <ion-label color="light" class="ion-text-center">{{ 'LOGIN.orconnect' | translate }}</ion-label>
     </ion-item>
     
     <div class="flex">
       <ion-button color="facebook" shape="round" (click)="facebookLogin()">
         <ion-icon slot="start" name="logo-facebook"></ion-icon>
-        Facebook
+        {{ 'LOGIN.facebook' | translate }}
       </ion-button>
-      <ion-button color="google" shape="round">
+     <!-- <ion-button color="google" shape="round">
         <ion-icon slot="start" name="logo-google"></ion-icon>
-        Google
-      </ion-button>
-    </div>
-    <div class="flex">
+        {{ 'LOGIN.google' | translate }} 
+      </ion-button>-->
       <ion-button color="anonyme" shape="round" (click)="anonymeLogin()">
         <ion-icon slot="start" name="person"></ion-icon>
-        Anonyme
+        {{ 'LOGIN.anon' | translate }}
       </ion-button>
     </div>
-  </div>
-</div>
-
-<div *ngIf="connected">
-    <!-- ¿ afficher si l'utilisateur est bien connectÈ -->
-    <ion-item>
-      <ion-label>
-        <p>MÈthode de connexion</p>
-        <h2><b>email & {{ method }}</b></h2>
-      </ion-label>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label>
-        <p>Identifiant</p>
-        <h2><b>{{ userId }}</b></h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        <p>Adresse email</p>
-        <h2><b>{{ mail }}</b></h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-button expand="block" color="danger" (click)="logout()">DECONNEXION</ion-button>
-    <ion-button expand="block" color="primary" href="map">Lancer CoincoinInsolite</ion-button>
-    
   </div>
 </ion-content>

@@ -1,0 +1,156 @@
+{
+  "LOGIN": {
+    "mail": {
+      "title": "Mail",
+      "placeholder": "Adresse mail"
+    },
+    "password": {
+      "title": "Mot de passe",
+      "placeholder": "Mot de passe"
+    },
+    "button": {
+      "login": "Connexion",
+      "register": "Inscription"
+    },
+    "forgetpwd": "Mot de passe oublié ?",
+    "orconnect": "Ou connectez-vous avec",
+    "facebook": "Facebook",
+    "google": "Google",
+    "anon": "Anonyme"
+  },
+  "REGISTER": {
+    "username": {
+      "title": "Nom d'utilisateur*",
+      "placeholder": "Entrez votre nom d'utilisateur"
+    },
+    "mail": {
+      "title": "Mail*",
+      "placeholder": "Entrez votre adresse mail"
+    },
+    "password": {
+      "title": "Mot de passe*",
+      "placeholder": "Entrez un mot de passe"
+    },
+    "cpassword": {
+      "title": "Confirmer le mot de passe*",
+      "placeholder": "Confirmez votre mot de passe"
+    },
+    "cgu": "J'accepte les Conditions Générales d'Utilisation",
+    "validate": "Confirmer l'inscription"
+  },
+  "MAP": {
+    "search": "Entrez une ville"
+  },
+  "FORGETPWD": {
+    "mail": {
+      "title": "Mail*",
+      "placeholder": "Entrez votre adresse mail"
+    },
+    "validate": "Envoyer le mail de récupération"
+  },
+  "SETTINGS": {
+    "title": "Paramètres",
+    "notification": {
+      "title": "Notifications",
+      "near": "Proche d'un lieu visité",
+      "newsletter": "Newsletters"
+    },
+    "username": {
+      "title": "Changer votre nom d'utilisateur",
+      "placeholder": "Entrez votre nouveau nom d'utilisateur",
+      "validate": "Changer mon nom d'utilisateur"
+    },
+    "password": {
+      "title": "Changer votre mot de passe",
+      "placeholder": "Entrez votre nouveau mot de passe",
+      "validate": "Changer mon mot de passe"
+    },
+    "profile": {
+      "title": "Sélectionnez une image de profil"
+    },
+    "lang": {
+      "title": "Sélectionnez votre langue"
+    },
+    "delete": "Supprimer mon compte",
+    "logout": "Déconnexion",
+    "cgu": "Conditions Générales d'Utilisation"
+  },
+  "SOCIAL": {
+    "highlight": "Lieux fréquemment visités",
+    "pictures": {
+      "title": "Mes photos",
+      "name": "Nom",
+      "date": "Date"
+    }
+  },
+  "CGU": {
+    "title": "About",
+    "cgu": {
+      "title": "General Terms of Use",
+      "1": {
+        "title": "1. A propos de nous",
+        "content": "La Société COINCOINS INSOLITE, SAS, au capital de 1 euro, dont le siège social est à ORVAULT (44114) 213 Route de Rennes, immatriculée au registre du commerce et des sociétés de ORVAULT sous le numéro 123 456 789 représentée par Monsieur Maël DEBON (ci-après la \" Société ”).\n    La Société propose les services suivants : Fournir une application mobile permettant aux randonneurs de localiser et visiter facilement des lieux insolites autour d'eux."
+      },
+      "2": {
+        "title": "2. Préambule",
+        "content": " La Société invite ses Utilisateurs à lire attentivement les présentes Conditions Générales d’Utilisation (ci-après les \" CGU \"). Les CGU s'appliquent à tous les Services fournis par la Société à ses Utilisateurs d'une même catégorie, quelles que soient les clauses pouvant être inscrites sur les documents de l'Utilisateur.\n    Les CGU sont systématiquement communiquées à l'Utilisateur qui en fait la demande."
+      },
+      "3": {
+        "title": "3. Définitions",
+        "content": "\" Conditions Générales d'Utilisation \" ou \" CGU \" désigne les présentes conditions générales d'utilisation en ligne ;\n    \" Services \" désigne toutes les prestations de service proposées aux Utilisateurs par la Société à travers la présente Application ;\n    \" Application \" désigne la présente Application, c’est-à-dire dreion.fr;\n    \" Société \" désigne la Société COINCOINS INSOLITE, plus amplement désignée à l'article I des présentes ; et\n    \" Utilisateur \" désigne toute personne qui fait utilisation de l'Application."
+      },
+      "4": {
+        "title": "4. Inscription",
+        "content": "L’inscription à l'Application est ouverte à toutes les personnes morales ou physiques.\n    L’utilisation des Services proposés sur l'Application est conditionnée à l’inscription de l’Utilisateur sur l'Application. L’inscription est gratuite.\n    Pour procéder à l’inscription, l’Utilisateur doit remplir tous les champs obligatoires, sans lesquels le service ne peut être délivré. A défaut l’inscription ne pourra être complétée.\n    Les Utilisateurs garantissent et déclarent sur l'honneur que toutes les informations communiquées sur l'Application, notamment lors de leur inscription, sont exactes et conformes à la réalité. Ils s’engagent à mettre à jour leurs informations personnelles à partir de la page dédiée à ces dernières et disponible dans leur compte.\n    Tout Utilisateur enregistré dispose d’un identifiant et d’un mot de passe. Ces derniers sont strictement personnels et confidentiels et ne devront en aucun cas faire l’objet d’une communication à des tiers sous peine de suppression du compte de l’Utilisateur enregistré contrevenant. Chaque Utilisateur inscrit est personnellement responsable du maintien de la confidentialité de son identifiant et de son mot de passe. La Société ne sera en aucun cas tenue pour responsable de l’usurpation d’identité d’un Utilisateur. Si un Utilisateur suspecte une fraude à n’importe quel moment, il devra contacter la Société dans les plus brefs délais afin que cette dernière puisse prendre les mesures nécessaires et régulariser la situation.\n    Chaque Utilisateur, qu’il soit une personne morale ou physique, ne peut être titulaire que d’un compte sur l'Application.\n    En cas de non-respect des CGU, notamment la création de plusieurs comptes pour une seule personne ou encore la fourniture de fausses informations, la Société se réserve le droit de procéder à la suppression temporaire ou définitive de tous les comptes crées par l’Utilisateur enregistré contrevenant.\n    La suppression du compte entraîne la perte définitive de tous les avantages et services acquis sur l'Application.\n    En cas de suppression d’un compte par la Société pour manquement aux devoirs et obligations énoncées dans les CGU, il est formellement interdit à l’Utilisateur contrevenant de se réinscrire sur l'Application directement, par le biais d’une autre adresse électronique ou par personne interposée sans l’autorisation expresse de la Société."
+      },
+      "5": {
+        "title": "5. Prestation de service",
+        "content": "Les Services faisant l’objet des CGU sont ceux qui figurent sur l'Application et qui sont proposés directement par la Société ou ses prestataires partenaires.\n    Les services sont décrits sur la page correspondante au sein de l'Application et mention est faite de toutes leurs caractéristiques essentielles. La Société ne peut être tenue responsable de l’impossibilité de réaliser ladite prestation lorsque l’Utilisateur n’est pas éligible."
+      },
+      "6": {
+        "title": "6. Traitement des données personnelles",
+        "content": "L'enregistrement sur l'Application entraîne le traitement des données à caractère personnel de l'Utilisateur. Si l'Utilisateur refuse le traitement de ses données, il lui est demandé de s'abstenir d’utiliser l'Application.\n    Ce traitement des données à caractère personnel se fait dans le respect du Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016.\n    Par ailleurs, conformément à la loi Informatique et Libertés du 6 janvier 1978, l'Utilisateur dispose, à tout moment, d'un droit d'interrogation, d'accès, de rectification, de modification et d'opposition à l'ensemble de ses données personnelles en écrivant, par courrier et en justifiant de son identité, à l'adresse suivante : support@dreion.fr.\n    Ces données personnelles sont nécessaires à l'amélioration des fonctionnalités de l'Application."
+      },
+      "7": {
+        "title": "7. Partage des données collectées",
+        "content": "L'Application peut avoir recours à des sociétés tierces pour effectuer certaines opérations. En naviguant sur l'Application, l'Utilisateur accepte que des sociétés tierces puissent avoir accès à ses données pour permettre le bon fonctionnement de l'Application.\n    Ces sociétés tierces n'ont accès aux données collectées que dans la cadre de la réalisation d'une tâche précise.\n    L'Application reste responsable du traitement de ces données.\n    Par ailleurs, l'Utilisateur peut donc être amené à recevoir des informations ou des offres commerciales de la part de la Société ou de ses partenaires.\n    L'Utilisateur peut à tout moment s'opposer à la réception de ces offres commerciales, en écrivant à l'adresse de la Société indiquée ci-dessus, ou en cliquant sur le lien prévu à cet effet au sein des courriers électroniques reçus.\n    Par ailleurs, les informations des Utilisateurs pourront être transmises à des tiers sans leur accord express préalable afin d'atteindre les buts suivants :\n    respecter la loi\n    protéger toute personne contre des dommages corporels graves, voire la mort\n    lutter contre la fraude ou les atteintes portées à la Société ou à ses utilisateurs\n    protéger les droits de propriété de la Société."
+      },
+      "8": {
+        "title": "8. Protection des données",
+        "content": "La Société assure un niveau de sécurité approprié et proportionnel aux risques encourus ainsi qu'à leur probabilité, conformément au Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016 .\n    Toutefois, ces mesures ne constituent en aucun cas une garantie et n'engagent pas la Société à une obligation de résultat concernant la sécurité des données."
+      },
+      "9": {
+        "title": "9. Cookies",
+        "content": "Pour permettre à ses Utilisateurs de bénéficier d’une navigation optimale sur l'Application et d’un meilleur fonctionnement des différentes interfaces et applications, la Société est susceptible d’implanter un cookie sur l’ordinateur de l’Utilisateur. Ce cookie permet de stocker des informations relatives à la navigation sur l'Application, ainsi qu’aux éventuelles données saisies par les Utilisateurs (notamment recherches, login, email, mot de passe).\n    L’Utilisateur autorise expressément la Société à déposer sur le disque dur de l’utilisateur un fichier dit« cookie ».\n    L’Utilisateur dispose de la possibilité de bloquer, modifier la durée de conservation, ou supprimer ce cookie via l’interface de son navigateur. Si la désactivation systématique des cookies sur le navigateur de l’Utilisateur l’empêche d’utiliser certains services ou fonctionnalités de l'Application, ce dysfonctionnement ne saurait en aucun cas constituer un dommage pour le membre qui ne pourra prétendre à aucune indemnité de ce fait."
+      },
+      "10": {
+        "title": "10. Modifications",
+        "content": "La Société se réserve le droit de modifier l'Application, les services qui y sont proposés, les CGU ainsi que toute procédure de livraison ou autre élément constitutif des prestations réalisées par la Société par le biais de l'Application."
+      },
+      "11": {
+        "title": "11. Responsabilité",
+        "content": "La Société ne peut en aucun cas être tenue responsable pour l’indisponibilité, qu’elle soit temporaire ou permanente de l'Application et, bien qu’elle mette en œuvre tous les moyens afin d’assurer en permanence le service, il se peut que celle-ci soit interrompue à tout moment. En outre, la Société se réserve le droit, par un acte volontaire, de rendre l'Application indisponible afin de réaliser toute opération de mise à jour, d’amélioration ou de maintenance.\n    Tel que mentionné auparavant dans les présentes, la Société ne peut en aucun cas être tenue responsable des retards de réalisation d’une prestation de service pour des motifs qui échappent à son contrôle, indépendants de sa volonté, imprévisibles et irrésistibles ou dont la faute ne peut lui être imputable."
+      },
+      "12": {
+        "title": "12. Propriété intellectuelle",
+        "content": "La marque, le logo, et la charte graphique da la présente Application sont des marques déposées auprès de l'INPI et des oeuvres protégées au titre de la propriété intellectuelle, dont la propriété revient exclusivement à la Société. Toute diffusion, exploitation, représentation, reproduction, qu’elle soit partielle ou intégrale sans l’autorisation expresse de ladite société exposera le contrevenant à des poursuites civiles et pénales."
+      }
+    }
+  },
+  "TOAST": {
+    "login": {
+      "invalid": "Adresse email ou mot de passe incorrect.",
+      "connected": "Vous êtes maintenant connecté."
+    },
+    "register": {
+      "invalid": "Adresse email ou mot de passe incorrect.",
+      "validate": "Votre compte a bien été créé.",
+      "cgu": "Vous devez accepter les CGU pour pouvoir continuer."
+    },
+    "recover": {
+      "invalid": "Une erreur s'est produite lors de l'envoi du mail de réinitialisation du mot de passe.",
+      "validate": "Un lien pour réinitialiser votre mot de passe à été envoyé dans votre boîte mail.",
+      "mail": "Veuillez insérer une adresse mail valide."
+    }
+  }
+}
