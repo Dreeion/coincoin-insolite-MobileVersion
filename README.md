@@ -26,6 +26,8 @@ Il est également demandé de designer et de développer un site web permettant 
 - @maeldebon - Project Lead
 - @Theia01 - Web Lead Dev
 
+All information related to the advancement can be found in the [progress.md](./progress.md) document.
+
 **Branches:**
 
 - [Mobile development](https://github.com/Dreeion/coincoin-insolite-mobile)
